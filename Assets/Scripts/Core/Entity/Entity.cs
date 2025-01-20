@@ -24,11 +24,12 @@ public class Entity : MonoBehaviour
     
     public EntityControlType ControlType => controlType;
     public IReadOnlyList<Category> Categories => categories;
-    public bool IsPlayer => ControlType == EntityControlType.Player;
+    public bool IsPlayer => controlType == EntityControlType.Player;
     public Animator Animator { get; private set; }
+    public EntityMovement Movement { get; private set; }
     
     public Stats Stats { get; private set; }
-    public bool IsDead => Stats.HPStat != null && Mathf.Approximately(Stats.HPStat.Value, 0f);
+    public bool IsDead => Stats.HPStat != null && Mathf.Approximately(Stats.HPStat.DefaultValue, 0f);
     
     public Entity Target { get; set; }
     
@@ -40,6 +41,9 @@ public class Entity : MonoBehaviour
         Animator = GetComponent<Animator>();
         Stats = GetComponent<Stats>();
         Stats.Setup(this);
+        
+        Movement = GetComponent<EntityMovement>();
+        Movement?.Setup(this);
     }
 
     public void TakeDamage(Entity instigator, object causer, float damage)
@@ -57,6 +61,11 @@ public class Entity : MonoBehaviour
 
     private void OnDead()
     {
+        if (Movement)
+        {
+            Movement.enabled = false;
+        }
+        
         onDead?.Invoke(this);
     }
 
