@@ -191,6 +191,5 @@ public class EntityMovement : MonoBehaviour
         }
     }
 
-    private void OnMoveSpeedChanged(Stat stat, float currentValue, float prevValue)
-        => agent.speed = currentValue;
+    private void OnMoveSpeedChanged(Stat stat, float currentValue, float prevValue) => agent.speed = currentValue;
 }

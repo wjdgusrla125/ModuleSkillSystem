@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 110646601}
   - component: {fileID: 110646600}
   - component: {fileID: 110646599}
+  - component: {fileID: 110646603}
   m_Layer: 6
   m_Name: 'Plane '
   m_TagString: Untagged
@@ -371,6 +372,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &110646603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110646598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 7a8a086967c061b42aa02d3f8ed2dcfe, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &214441263
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +927,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 694900271}
+    - targetCorrespondingSourceObject: {fileID: 4291817563105933716, guid: 2e26caaa19f77294384b8808dbefd5c8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 694900277}
   m_SourcePrefab: {fileID: 100100000, guid: 2e26caaa19f77294384b8808dbefd5c8, type: 3}
 --- !u!1 &694900268 stripped
 GameObject:
@@ -972,6 +1008,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedStat: {fileID: 11400000, guid: b4be1ca9a530399468a7c48207e33496, type: 2}
   rollTime: 0.5
+--- !u!114 &694900277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694900268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57d5f4fe59237b4ab66bde9831ab85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &800318958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4867025410714208192, guid: b266d01d432e29d498a87ffa181c30fe,
@@ -1873,6 +1921,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3985387172020762508}
+    - targetCorrespondingSourceObject: {fileID: 4291817563105933716, guid: dbd571408fc51b741a9c5acb1c507f26,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3985387172020762513}
   m_SourcePrefab: {fileID: 100100000, guid: dbd571408fc51b741a9c5acb1c507f26, type: 3}
 --- !u!1 &3985387172020762505 stripped
 GameObject:
@@ -1950,6 +2002,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedStat: {fileID: 11400000, guid: b4be1ca9a530399468a7c48207e33496, type: 2}
   rollTime: 0.5
+--- !u!114 &3985387172020762513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985387172020762505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57d5f4fe59237b4ab66bde9831ab85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4238361481107240019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1962,6 +2026,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kachujin G Rosales
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238361481607009672, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238361481607009678, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238361481607009678, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238361481607009678, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      propertyPath: m_ImplicitTensor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238361481607009679, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4421151865908168221, guid: 99080f0e7d0affa459dc65be79172638,
         type: 3}
@@ -2018,6 +2107,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7762863142840753255, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2041,7 +2135,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3895832060575833255, guid: 99080f0e7d0affa459dc65be79172638,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4238361481107240029}
+      addedObject: {fileID: 4238361481107240034}
   m_SourcePrefab: {fileID: 100100000, guid: 99080f0e7d0affa459dc65be79172638, type: 3}
 --- !u!1 &4238361481107240020 stripped
 GameObject:
@@ -2131,7 +2225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d29a28a4f51e8c4e8e1aac4b50b87d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4238361481107240029
+--- !u!114 &4238361481107240034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2140,10 +2234,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4238361481107240020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd3aac452c5f44242b34d98b19cd75c7, type: 3}
+  m_Script: {fileID: 11500000, guid: f57d5f4fe59237b4ab66bde9831ab85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollDistance: 5
 --- !u!1001 &4867025411040109102
 PrefabInstance:
   m_ObjectHideFlags: 0
