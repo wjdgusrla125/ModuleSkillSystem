@@ -522,10 +522,10 @@ GameObject:
   - component: {fileID: 568960843}
   - component: {fileID: 568960842}
   - component: {fileID: 568960848}
-  - component: {fileID: 568960847}
   - component: {fileID: 568960846}
   - component: {fileID: 568960845}
   - component: {fileID: 568960849}
+  - component: {fileID: 568960850}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -742,59 +742,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 0b0a01ce9cb28b44992a6c778ce8a1b3, type: 2}
---- !u!114 &568960847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568960838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ImpulseDefinition:
-    m_ImpulseChannel: 1
-    m_ImpulseShape: 2
-    m_CustomImpulseShape:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_ImpulseDuration: 0.2
-    m_ImpulseType: 3
-    m_DissipationRate: 0.25
-    m_RawSignal: {fileID: 0}
-    m_AmplitudeGain: 8
-    m_FrequencyGain: 8
-    m_RepeatMode: 0
-    m_Randomize: 1
-    m_TimeEnvelope:
-      m_AttackShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_DecayShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
-      m_ScaleWithImpact: 1
-      m_HoldForever: 0
-    m_ImpactRadius: 100
-    m_DirectionMode: 0
-    m_DissipationMode: 2
-    m_DissipationDistance: 100
-    m_PropagationSpeed: 343
-  m_DefaultVelocity: {x: 0, y: -1, z: 0}
 --- !u!114 &568960848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,7 +777,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d26cb3592d6fb4d85e0e00be2e53bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorDatas: []
+  cursorDatas:
+  - type: 1
+    texture: {fileID: 2800000, guid: f38f4c8f489d21c45861f592d8334897, type: 3}
+--- !u!114 &568960850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568960838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 2
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.2
+    m_ImpulseType: 3
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+    m_AmplitudeGain: 8
+    m_FrequencyGain: 8
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -1, z: 0}
 --- !u!224 &686811240 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5008071710084391736, guid: bdde4b1a44407ba4d86760f306da0bb4,
@@ -992,8 +994,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659b39d9e58da443a9d17f4813c67a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  categories: []
-  controlType: 0
+  categories:
+  - {fileID: 11400000, guid: b7f4326ac09561f42b7c95b0559ed397, type: 2}
+  controlType: 1
 --- !u!114 &694900271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1939,7 +1942,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3985387172020762505}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0a4e98600843cf4ca05cc36fd4e05fe, type: 3}
   m_Name: 
@@ -1981,13 +1984,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3985387172020762505}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f659b39d9e58da443a9d17f4813c67a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  categories: []
-  controlType: 0
+  categories:
+  - {fileID: 11400000, guid: cb2232848f58a1144a931017821c18e4, type: 2}
+  controlType: 1
 --- !u!114 &3985387172020762508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2136,6 +2140,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4238361481107240034}
+    - targetCorrespondingSourceObject: {fileID: 3895832060575833255, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4238361481107240035}
+    - targetCorrespondingSourceObject: {fileID: 3895832060575833255, guid: 99080f0e7d0affa459dc65be79172638,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4238361481107240036}
   m_SourcePrefab: {fileID: 100100000, guid: 99080f0e7d0affa459dc65be79172638, type: 3}
 --- !u!1 &4238361481107240020 stripped
 GameObject:
@@ -2197,7 +2209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659b39d9e58da443a9d17f4813c67a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  categories: []
+  categories:
+  - {fileID: 11400000, guid: b7f4326ac09561f42b7c95b0559ed397, type: 2}
   controlType: 0
 --- !u!114 &4238361481107240023
 MonoBehaviour:
@@ -2237,6 +2250,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57d5f4fe59237b4ab66bde9831ab85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4238361481107240035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238361481107240020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d4bdd3c8a15dc4fa32dc94558707b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testEffect: {fileID: 11400000, guid: 9566d6d1cf341464b9561c50cc20e46f, type: 2}
+  effectLevel: 1
+--- !u!114 &4238361481107240036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4238361481107240020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f581f828932dd2949a57ba8772f0d7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 1
+  targetSearcher:
+    selectionAction:
+      rid: 872920154180157444
+    searchAction:
+      rid: 872920154180157446
+  references:
+    version: 2
+    RefIds:
+    - rid: 872920154180157444
+      type: {class: SelectPosition, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorViewAction:
+          rid: 872920154180157445
+        isUseScale: 0
+        range: 5
+        angle: 360
+        layerMask:
+          serializedVersion: 2
+          m_Bits: 64
+    - rid: 872920154180157445
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 0
+        isAttachIndicatorToRequester: 1
+    - rid: 872920154180157446
+      type: {class: SearchArea, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorViewAction:
+          rid: 872920154180157447
+        isUseScale: 0
+        range: 3
+        angle: 360
+        isIncludeSelf: 0
+        isSearchSameCategory: 0
+    - rid: 872920154180157447
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 0
+        isAttachIndicatorToRequester: 0
 --- !u!1001 &4867025411040109102
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1338047e14e840144ba8218678eafce5, type: 3}
-  m_Name: CategoryDatabase
+  m_Name: EffectDatabase
   m_EditorClassIdentifier: 
   datas:
-  - {fileID: 11400000, guid: 01f6409865d7ffe4fb6d3c642c05f11a, type: 2}
-  - {fileID: 11400000, guid: b7f4326ac09561f42b7c95b0559ed397, type: 2}
-  - {fileID: 11400000, guid: cb2232848f58a1144a931017821c18e4, type: 2}
+  - {fileID: 11400000, guid: 9566d6d1cf341464b9561c50cc20e46f, type: 2}

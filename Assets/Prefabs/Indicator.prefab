@@ -325,6 +325,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -438,6 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8583574775025605396}
+  - component: {fileID: -1240827393487165623}
   m_Layer: 0
   m_Name: Indicator
   m_TagString: Untagged
@@ -461,6 +463,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1240827393487165623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545020625849464054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8f305014c88584caf6ccb48d78c613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2448069322176235639}
+  mainImage: {fileID: 3489781614989979909}
+  mainImageFill: {fileID: 643711086319396029}
+  fillImage: {fileID: 8992209990509098262}
+  leftBorder: {fileID: 1322467881018290377}
+  rightBorder: {fileID: 7115608934681302665}
 --- !u!1 &8249163596807688785
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +553,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
