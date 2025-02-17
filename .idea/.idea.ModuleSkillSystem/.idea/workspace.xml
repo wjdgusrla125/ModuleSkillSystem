@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d073c2f4-7d56-44c0-bbdc-87ffc2ca343c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Indicator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Indicator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/CategoryDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/CategoryDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/CustomEditorUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/CustomEditorUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/IdentifiedObjectEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/IdentifiedObjectEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/EntityStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/EntityStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/State/EntityDefaultState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/State/EntityDefaultState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +107,7 @@
       <workItem from="1738923796494" duration="744000" />
       <workItem from="1739169912323" duration="7549000" />
       <workItem from="1739346198705" duration="5969000" />
+      <workItem from="1739760785170" duration="7695000" />
     </task>
     <servers />
   </component>

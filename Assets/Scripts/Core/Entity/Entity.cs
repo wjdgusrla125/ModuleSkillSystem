@@ -33,6 +33,8 @@ public class Entity : MonoBehaviour
     
     public EntityMovement Movement { get; private set; }
     
+    public SkillSystem SkillSystem { get; private set; }
+    
     public Entity Target { get; set; }
     
     public MonoStateMachine<Entity> StateMachine { get; private set; }
@@ -51,6 +53,9 @@ public class Entity : MonoBehaviour
         
         StateMachine = GetComponent<MonoStateMachine<Entity>>();
         StateMachine?.Setup(this);
+        
+        SkillSystem = GetComponent<SkillSystem>();
+        SkillSystem?.Setup(this);
     }
 
     public void TakeDamage(Entity instigator, object causer, float damage)
