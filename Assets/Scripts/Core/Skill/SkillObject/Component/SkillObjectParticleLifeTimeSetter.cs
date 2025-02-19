@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillObjectParticleLifeTimeSetter : MonoBehaviour
+[AddComponentMenu("SkillObject/ParticleLifeTimeSetter")]
+public class SkillObjectParticleLifeTimeSetter : MonoBehaviour, ISkillObjectComponent
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private bool isUseApplyCycleForStartLifeTime;
 
-    // Update is called once per frame
-    void Update()
+    [Space]
+    [SerializeField]
+    private ParticleSystem[] particleSystems;
+
+    public void OnSetupSkillObject(SkillObject skillObject)
     {
-        
+        foreach (var particleSystem in particleSystems)
+        {
+            particleSystem.Stop();
+            var main = particleSystem.main;
+            main.duration = skillObject.DestroyTime;
+            main.startLifetime = isUseApplyCycleForStartLifeTime ? skillObject.ApplyCycle : skillObject.Duration;
+            particleSystem.Play(false);
+        }
     }
 }

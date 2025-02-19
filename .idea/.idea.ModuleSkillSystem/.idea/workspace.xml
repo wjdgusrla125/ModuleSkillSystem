@@ -6,9 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="d073c2f4-7d56-44c0-bbdc-87ffc2ca343c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/EntityStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/EntityStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/State/EntityDefaultState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/StateMachine/State/EntityDefaultState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/Action/SpawnSkillObjectAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/Action/SpawnSkillObjectAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/ISkillObjectComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/ISkillObjectComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/SkillObjectParticleCircleShapeSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/SkillObjectParticleCircleShapeSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/SkillObjectParticleLifeTimeSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/SkillObjectParticleLifeTimeSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/SkillObjectScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/Component/SkillObjectScaler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/SkillObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillObject/SkillObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/StateMachine/InstantSkillStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/StateMachine/InstantSkillStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/StateMachine/SkillStateMachineEnums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/StateMachine/SkillStateMachineEnums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/UseCondition/IsEntityReadyCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/UseCondition/IsEntityReadyCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/AnimatorParameterDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/AnimatorParameterDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/Skill/SkillTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Skill/SkillTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/Skill/TestSkillAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Skill/TestSkillAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test/Skill/TestSkillPreceidingAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Skill/TestSkillPreceidingAction.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +123,8 @@
       <workItem from="1739169912323" duration="7549000" />
       <workItem from="1739346198705" duration="5969000" />
       <workItem from="1739760785170" duration="7695000" />
+      <workItem from="1739846206137" duration="4578000" />
+      <workItem from="1739948748436" duration="1306000" />
     </task>
     <servers />
   </component>

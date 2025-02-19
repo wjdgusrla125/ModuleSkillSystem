@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestSkillPreceidingAction : MonoBehaviour
+namespace Test
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class TestSkillPreceidingAction : SkillPrecedingAction
     {
-        
-    }
+        private int count;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void Release(Skill skill)
+            => count = 0;
+
+        public override bool Run(Skill skill)
+        {
+            Debug.Log($"Preceding Action Count: {++count}");
+            if (count == 100)
+                return true;
+            else
+                return false;
+        }
+
+        public override object Clone() => new TestSkillPreceidingAction();
     }
 }

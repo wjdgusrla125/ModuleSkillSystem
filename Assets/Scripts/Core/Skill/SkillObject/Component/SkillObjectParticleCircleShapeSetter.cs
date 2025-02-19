@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillObjectParticleCircleShapeSetter : MonoBehaviour
+[AddComponentMenu("SkillObject/ParticleCircleShapeSetter")]
+public class SkillObjectParticleCircleShapeSetter : MonoBehaviour, ISkillObjectComponent
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private ParticleSystem[] particleSystems;
 
-    // Update is called once per frame
-    void Update()
+    public void OnSetupSkillObject(SkillObject skillObject)
     {
-        
+        var range = (float)skillObject.TargetSearcher.SearchProperRange;
+        foreach (var particelSystem in particleSystems)
+        {
+            var shape = particelSystem.shape;
+            shape.radius = range;
+        }
     }
 }

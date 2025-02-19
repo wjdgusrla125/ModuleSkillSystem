@@ -74,7 +74,7 @@ public class SkillSystemWindow : EditorWindow
     private void OnEnable()
     {
         SetupStyle();
-        SetupDatabases(new[] { typeof(Category), typeof(Stat), typeof(Effect) });
+        SetupDatabases(new[] { typeof(Category), typeof(Stat), typeof(Skill), typeof(Effect) });
     }
 
     private void OnDisable()

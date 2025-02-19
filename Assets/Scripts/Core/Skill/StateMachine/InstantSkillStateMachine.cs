@@ -14,6 +14,7 @@ public class InstantSkillStateMachine : StateMachine<Skill>
         AddState<InActionState>();
         AddState<CooldownState>();
     }
+    
     protected override void MakeTransitions()
     {
         // Ready State

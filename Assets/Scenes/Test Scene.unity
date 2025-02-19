@@ -933,6 +933,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 694900277}
+    - targetCorrespondingSourceObject: {fileID: 4291817563105933716, guid: 2e26caaa19f77294384b8808dbefd5c8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 694900278}
   m_SourcePrefab: {fileID: 100100000, guid: 2e26caaa19f77294384b8808dbefd5c8, type: 3}
 --- !u!1 &694900268 stripped
 GameObject:
@@ -947,7 +951,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694900268}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0a4e98600843cf4ca05cc36fd4e05fe, type: 3}
   m_Name: 
@@ -989,7 +993,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694900268}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f659b39d9e58da443a9d17f4813c67a8, type: 3}
   m_Name: 
@@ -1023,6 +1027,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57d5f4fe59237b4ab66bde9831ab85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &694900278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694900268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5efc92127dd914897ad12122ec429a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSkills: []
 --- !u!224 &800318958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4867025410714208192, guid: b266d01d432e29d498a87ffa181c30fe,
@@ -1928,6 +1945,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3985387172020762513}
+    - targetCorrespondingSourceObject: {fileID: 4291817563105933716, guid: dbd571408fc51b741a9c5acb1c507f26,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3985387172020762514}
   m_SourcePrefab: {fileID: 100100000, guid: dbd571408fc51b741a9c5acb1c507f26, type: 3}
 --- !u!1 &3985387172020762505 stripped
 GameObject:
@@ -2018,6 +2039,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57d5f4fe59237b4ab66bde9831ab85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3985387172020762514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985387172020762505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5efc92127dd914897ad12122ec429a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSkills: []
 --- !u!1001 &4238361481107240019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2259,11 +2293,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4238361481107240020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92d4bdd3c8a15dc4fa32dc94558707b3, type: 3}
+  m_Script: {fileID: 11500000, guid: bd5efc92127dd914897ad12122ec429a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testEffect: {fileID: 11400000, guid: 9566d6d1cf341464b9561c50cc20e46f, type: 2}
-  effectLevel: 1
+  defaultSkills: []
 --- !u!114 &4238361481107240036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2273,57 +2306,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4238361481107240020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f581f828932dd2949a57ba8772f0d7a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 72b7e7a34434b8d4e9e9106d8e62e457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 1
-  targetSearcher:
-    selectionAction:
-      rid: 872920154180157444
-    searchAction:
-      rid: 872920154180157446
-  references:
-    version: 2
-    RefIds:
-    - rid: 872920154180157444
-      type: {class: SelectPosition, ns: , asm: Assembly-CSharp}
-      data:
-        indicatorViewAction:
-          rid: 872920154180157445
-        isUseScale: 0
-        range: 5
-        angle: 360
-        layerMask:
-          serializedVersion: 2
-          m_Bits: 64
-    - rid: 872920154180157445
-      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
-      data:
-        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
-          type: 3}
-        indicatorRadiusOverride: 0
-        indicatorAngleOverride: 0
-        isUseIndicatorFillAmount: 0
-        isAttachIndicatorToRequester: 1
-    - rid: 872920154180157446
-      type: {class: SearchArea, ns: , asm: Assembly-CSharp}
-      data:
-        indicatorViewAction:
-          rid: 872920154180157447
-        isUseScale: 0
-        range: 3
-        angle: 360
-        isIncludeSelf: 0
-        isSearchSameCategory: 0
-    - rid: 872920154180157447
-      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
-      data:
-        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
-          type: 3}
-        indicatorRadiusOverride: 0
-        indicatorAngleOverride: 0
-        isUseIndicatorFillAmount: 0
-        isAttachIndicatorToRequester: 0
+  testSkill: {fileID: 11400000, guid: 95c1f3724e983e64b8512009344d141f, type: 2}
 --- !u!1001 &4867025411040109102
 PrefabInstance:
   m_ObjectHideFlags: 0
