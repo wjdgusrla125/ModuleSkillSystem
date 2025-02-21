@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2887665114660680876}
   - component: {fileID: 7939669926220162472}
   - component: {fileID: 7131423646201259683}
+  - component: {fileID: 2478076331670883722}
   m_Layer: 5
   m_Name: Skill Progress Bar
   m_TagString: Untagged
@@ -78,6 +79,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2478076331670883722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451694143679307974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c835f27b47c928446af2dacab0e1d429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 4344639038273061520}
+  timeText: {fileID: 6531247525806579654}
 --- !u!1 &1036303172113178607
 GameObject:
   m_ObjectHideFlags: 0

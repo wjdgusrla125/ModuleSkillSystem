@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     {
         entity = GetComponent<Entity>();
         entity.SkillSystem.onSkillTargetSelectionCompleted += ReserveSkill;
+
+
+        MouseController.Instance.onLeftClicked += SelectTarget;
     }
 
     private void OnEnable()
@@ -18,6 +21,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
         => MouseController.Instance.onRightClicked -= MoveToPosition;
+    private void OnDestroy()
+        => MouseController.Instance.onLeftClicked -= SelectTarget;
+
+    private void SelectTarget(Vector2 mousePosition)
+    {
+        var ray = Camera.main.ScreenPointToRay(mousePosition);
+        if (Physics.Raycast(ray, out var hitInfo, Mathf.Infinity))
+        {
+            var entity = hitInfo.transform.GetComponent<Entity>();
+            if (entity)
+                EntityHUD.Instance.Show(entity);
+        }
+    }
 
     private void MoveToPosition(Vector2 mousePosition)
     {

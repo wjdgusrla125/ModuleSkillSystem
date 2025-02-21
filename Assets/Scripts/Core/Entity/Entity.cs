@@ -78,6 +78,8 @@ public class Entity : MonoBehaviour
             Movement.enabled = false;
         }
         
+        SkillSystem.CancelAll(true);
+        
         onDead?.Invoke(this);
     }
 

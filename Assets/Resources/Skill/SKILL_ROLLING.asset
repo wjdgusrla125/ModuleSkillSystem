@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4c79f76f889514f8d2b5f954436db1, type: 3}
+  m_Name: SKILL_ROLLING
+  m_EditorClassIdentifier: 
+  categories: []
+  icon: {fileID: 21300000, guid: 9bd499b75d52b214ea66b02c9933359b, type: 3}
+  id: 0
+  codeName: ROLLING
+  displayName: "\uAE34\uAE09 \uD68C\uD53C"
+  description: "\uCE90\uB9AD\uD130\uAC00 \uBC14\uB77C\uBCF4\uACE0 \uC788\uB294 \uC804\uBC29\uC73C\uB85C
+    <color=blue>$[precedingAction.distance]m</color>\uB9CC\uD07C \uAD6C\uB978 \uB4A4,
+    <color=green>$[effectAction.totalValue.0]</color>\uB9CC\uD07C \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+  type: 0
+  useType: 0
+  executionType: 0
+  applyType: 0
+  needSelectionResultType: 0
+  targetSelectionTimingOption: 0
+  targetSearchTimingOption: 0
+  acquisitionConditions: []
+  acquisitionCosts: []
+  useConditions:
+  - rid: 872920357202034696
+  isAllowLevelExceedDatas: 0
+  maxLevel: 1
+  defaultLevel: 1
+  skillDatas:
+  - level: 1
+    levelUpConditions: []
+    levelUpCosts: []
+    precedingAction:
+      rid: 872920357202034697
+    action:
+      rid: 872920357202034700
+    runningFinishOption: 0
+    duration: 0
+    applyCount: 1
+    applyCycle: 0
+    cooldown:
+      defaultValue: 5
+      scaleStat: {fileID: 0}
+    targetSearcher:
+      selectionAction:
+        rid: 872920357202034701
+      searchAction:
+        rid: 872920357202034702
+    costs:
+    - rid: 872920357202034703
+    isUseCast: 0
+    castTime:
+      defaultValue: 0
+      scaleStat: {fileID: 0}
+    isUseCharge: 0
+    chargeFinishActionOption: 0
+    chargeDuration: 0
+    chargeTime: 0
+    needChargeTimeToUse: 0
+    startChargePower: 0
+    effectSelectors:
+    - level: 1
+      effect: {fileID: 11400000, guid: 3f7bdac4ad335d9488750bb664274faf, type: 2}
+    inSkillActionFinishOption: 0
+    castAnimatorParamter:
+      type: 0
+      name: 
+    chargeAnimatorParameter:
+      type: 0
+      name: 
+    precedingActionAnimatorParameter:
+      type: 0
+      name: 
+    actionAnimatorParameter:
+      type: 0
+      name: 
+    customActionsOnCast: []
+    customActionsOnCharge: []
+    customActionsOnPrecedingAction: []
+    customActionsOnAction: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 872920357202034696
+      type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920357202034697
+      type: {class: RollingAction, ns: , asm: Assembly-CSharp}
+      data:
+        distance: 5
+    - rid: 872920357202034700
+      type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920357202034701
+      type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+    - rid: 872920357202034702
+      type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+    - rid: 872920357202034703
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
+        value:
+          defaultValue: 5
+          scaleStat: {fileID: 11400000, guid: a0063bb578b7ddf479860bc93bac59c1, type: 2}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2009718054692058836}
   - component: {fileID: 4829349273178164}
   - component: {fileID: -1828293616196764022}
+  - component: {fileID: 1150274959575373591}
   m_Layer: 5
   m_Name: Skill Effect List View
   m_TagString: Untagged
@@ -82,3 +83,17 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1150274959575373591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009718054692058839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7751d225e3a15254c9fbefb8cb4955ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectViewPrefab: {fileID: 25529925603346851, guid: a134fc8b56fec7c4d9660afc2180f86d,
+    type: 3}

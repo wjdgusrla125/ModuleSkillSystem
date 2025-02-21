@@ -10,39 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d51c633688d988841b92e858ab2e737f, type: 3}
-  m_Name: EFFECT_TEST_EFFECT
+  m_Name: EFFECT_EXPLOSION_DAMAGE
   m_EditorClassIdentifier: 
   categories: []
   icon: {fileID: 0}
-  id: 1
-  codeName: TEST_EFFECT
-  displayName: "\uD14C\uC2A4\uD2B8 \uC774\uD399\uD2B8"
-  description: "\uD14C\uC2A4\uD2B8 \uC774\uD399\uD2B8\uC785\uB2C8\uB2E4"
+  id: 4
+  codeName: EXPLOSION_DAMAGE
+  displayName: 
+  description: 
   type: 0
   isAllowDuplicate: 1
   removeDuplicateTargetOption: 0
   isShowInUI: 0
   isAllowLevelExceedDatas: 0
-  maxLevel: 2
+  maxLevel: 1
   effectDatas:
   - level: 1
     maxStack: 1
     stackActions: []
     action:
-      rid: 872920288434061316
-    runningFinishOption: 0
-    isApplyAllWhenDurationExpires: 0
-    duration:
-      defaultValue: 0
-      scaleStat: {fileID: 0}
-    applyCount: 1
-    applyCycle: 0
-    customActions: []
-  - level: 2
-    maxStack: 1
-    stackActions: []
-    action:
-      rid: 872920288434061317
+      rid: 872920357202034726
     runningFinishOption: 0
     isApplyAllWhenDurationExpires: 0
     duration:
@@ -54,11 +41,12 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 872920288434061316
-      type: {class: TestEffectAction, ns: Test, asm: Assembly-CSharp}
+    - rid: 872920357202034726
+      type: {class: DealDamageAction, ns: , asm: Assembly-CSharp}
       data:
-        value: 10
-    - rid: 872920288434061317
-      type: {class: TestEffectAction, ns: Test, asm: Assembly-CSharp}
-      data:
-        value: 20
+        defaultDamage: 10
+        bonusDamageStat: {fileID: 11400000, guid: 2158de39d0c02af42876524eb4198a59,
+          type: 2}
+        bonusDamageStatFactor: 1.5
+        bonusDamagePerLevel: 0
+        bonusDamagePerStack: 0

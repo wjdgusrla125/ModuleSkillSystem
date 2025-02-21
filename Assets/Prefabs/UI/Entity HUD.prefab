@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 12775968}
   - component: {fileID: 3440165087599763686}
   - component: {fileID: 3750352173606042606}
+  - component: {fileID: 4811175888884605140}
   m_Layer: 5
   m_Name: Entity HUD
   m_TagString: Untagged
@@ -342,12 +343,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &4811175888884605140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114561562110928444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94595b45c20c6624b9f20e026d387216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1633303217}
+  hpFillImage: {fileID: 7283231035330234601}
+  hpValueText: {fileID: 6645307517561500173}
+  skillCostFillImage: {fileID: 1729855812795429459}
+  skillCostValueText: {fileID: 2389807494124341431}
+  effectListView: {fileID: 5495390211332795724}
 --- !u!1001 &3008985090905732840
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 5302881288391554313}
     m_Modifications:
     - target: {fileID: 641836332409749087, guid: 170a6a29fd2bfef4581f9056a3d58166,
@@ -556,7 +575,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 170a6a29fd2bfef4581f9056a3d58166, type: 3}
 --- !u!224 &1654621883695605124 stripped
 RectTransform:
@@ -564,12 +585,36 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3008985090905732840}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729855812795429459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3585887081067513019, guid: 170a6a29fd2bfef4581f9056a3d58166,
+    type: 3}
+  m_PrefabInstance: {fileID: 3008985090905732840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2389807494124341431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 641836332409749087, guid: 170a6a29fd2bfef4581f9056a3d58166,
+    type: 3}
+  m_PrefabInstance: {fileID: 3008985090905732840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4878828531416709723
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 4624461249298664282}
     m_Modifications:
     - target: {fileID: 2009718054692058836, guid: 74907e52fce86da4999dbf64f41f1099,
@@ -683,8 +728,22 @@ PrefabInstance:
       value: Skill Effect List View
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74907e52fce86da4999dbf64f41f1099, type: 3}
+--- !u!114 &5495390211332795724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1150274959575373591, guid: 74907e52fce86da4999dbf64f41f1099,
+    type: 3}
+  m_PrefabInstance: {fileID: 4878828531416709723}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7751d225e3a15254c9fbefb8cb4955ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6365529518605192335 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2009718054692058836, guid: 74907e52fce86da4999dbf64f41f1099,
@@ -696,7 +755,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 5302881288391554313}
     m_Modifications:
     - target: {fileID: 641836332409749087, guid: 170a6a29fd2bfef4581f9056a3d58166,
@@ -713,6 +772,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Entity HUD HPStat View
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585887081067513019, guid: 170a6a29fd2bfef4581f9056a3d58166,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4554381849025205100, guid: 170a6a29fd2bfef4581f9056a3d58166,
         type: 3}
@@ -820,8 +884,34 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 170a6a29fd2bfef4581f9056a3d58166, type: 3}
+--- !u!114 &6645307517561500173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 641836332409749087, guid: 170a6a29fd2bfef4581f9056a3d58166,
+    type: 3}
+  m_PrefabInstance: {fileID: 6111557613789678674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7283231035330234601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3585887081067513019, guid: 170a6a29fd2bfef4581f9056a3d58166,
+    type: 3}
+  m_PrefabInstance: {fileID: 6111557613789678674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7774610907105517374 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4554381849025205100, guid: 170a6a29fd2bfef4581f9056a3d58166,

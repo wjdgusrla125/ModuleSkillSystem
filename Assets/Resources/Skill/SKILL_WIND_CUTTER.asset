@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4c79f76f889514f8d2b5f954436db1, type: 3}
+  m_Name: SKILL_WIND_CUTTER
+  m_EditorClassIdentifier: 
+  categories: []
+  icon: {fileID: 21300000, guid: 705ef483528497b4b9742e3e1b95dae7, type: 3}
+  id: 7
+  codeName: WIND_CUTTER
+  displayName: "\uBC14\uB78C\uC758 \uCE7C"
+  description: "\uB300\uC0C1\uC758 \uC8FC\uC704\uC5D0 \uBC14\uB78C\uC758 \uCE7C\uB0A0\uC744
+    \uC77C\uC73C\uCF1C $[applyCycle.0]\uCD08\uB9C8\uB2E4 <color=red>$[effectAction.totalDamage.0]</color>\uC758
+    \uD53C\uD574\uB97C \uCD1D $[applyCount.0]\uBC88 \uC90D\uB2C8\uB2E4."
+  type: 0
+  useType: 0
+  executionType: 0
+  applyType: 0
+  needSelectionResultType: 0
+  targetSelectionTimingOption: 0
+  targetSearchTimingOption: 0
+  acquisitionConditions: []
+  acquisitionCosts: []
+  useConditions:
+  - rid: 872920357202034783
+  isAllowLevelExceedDatas: 0
+  maxLevel: 1
+  defaultLevel: 1
+  skillDatas:
+  - level: 1
+    levelUpConditions: []
+    levelUpCosts: []
+    precedingAction:
+      rid: -2
+    action:
+      rid: 872920357202034784
+    runningFinishOption: 0
+    duration: 0
+    applyCount: 1
+    applyCycle: 0
+    cooldown:
+      defaultValue: 10
+      scaleStat: {fileID: 0}
+    targetSearcher:
+      selectionAction:
+        rid: 872920357202034785
+      searchAction:
+        rid: 872920357202034787
+    costs:
+    - rid: 872920357202034788
+    isUseCast: 0
+    castTime:
+      defaultValue: 0
+      scaleStat: {fileID: 0}
+    isUseCharge: 0
+    chargeFinishActionOption: 0
+    chargeDuration: 0
+    chargeTime: 0
+    needChargeTimeToUse: 0
+    startChargePower: 0
+    effectSelectors:
+    - level: 1
+      effect: {fileID: 11400000, guid: af292143624756e41be44e1ca5ab8088, type: 2}
+    inSkillActionFinishOption: 0
+    castAnimatorParamter:
+      type: 0
+      name: 
+    chargeAnimatorParameter:
+      type: 0
+      name: 
+    precedingActionAnimatorParameter:
+      type: 0
+      name: 
+    actionAnimatorParameter:
+      type: 1
+      name: upHandCast
+    customActionsOnCast: []
+    customActionsOnCharge: []
+    customActionsOnPrecedingAction: []
+    customActionsOnAction: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 872920357202034783
+      type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920357202034784
+      type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920357202034785
+      type: {class: SelectEntity, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: 872920357202034786
+        isUseScale: 0
+        range: 5
+        angle: 360
+        isIncludeSelf: 0
+        isSelectSameCategory: 0
+    - rid: 872920357202034786
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 0
+        isAttachIndicatorToRequester: 1
+    - rid: 872920357202034787
+      type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+    - rid: 872920357202034788
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
+        value:
+          defaultValue: 10
+          scaleStat: {fileID: 0}

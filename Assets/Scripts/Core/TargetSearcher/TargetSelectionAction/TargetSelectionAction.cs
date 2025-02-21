@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
+[System.Serializable]
 public abstract class TargetSelectionAction : ICloneable
 {
     public delegate void SelectCompletedHandler(TargetSelectionResult result);
 
-    // Indicator를 보여주는 Module
     [Header("Indicator")]
+    [SerializeField]
+    private bool isShowIndicatorPlayerOnly;
+    // Indicator를 보여주는 Module
     [SerializeReference, SubclassSelector]
     private IndicatorViewAction indicatorViewAction;
 
@@ -85,7 +87,13 @@ public abstract class TargetSelectionAction : ICloneable
     public abstract object Clone();
 
     public virtual void ShowIndicator(TargetSearcher targetSearcher, GameObject requesterObject, float fillAmount)
-        => indicatorViewAction?.ShowIndicator(targetSearcher, requesterObject, Range, Angle, fillAmount);
+    {
+        var entity = requesterObject.GetComponent<Entity>();
+        if (isShowIndicatorPlayerOnly && (entity == null || !entity.IsPlayer))
+            return;
+
+        indicatorViewAction?.ShowIndicator(targetSearcher, requesterObject, Range, Angle, fillAmount);
+    }
 
     public virtual void HideIndicator() => indicatorViewAction?.HideIndicator();
     

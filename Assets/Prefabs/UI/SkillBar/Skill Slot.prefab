@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7567026946038292088}
   - component: {fileID: 3614224085868668731}
   - component: {fileID: 3008098130726796157}
+  - component: {fileID: 665353686617269677}
   m_Layer: 5
   m_Name: Skill Slot
   m_TagString: Untagged
@@ -82,6 +83,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &665353686617269677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783056509498449081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135de303c0af5724fbcd5dc341771f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconImage: {fileID: 2042559146441930511}
+  blindImage: {fileID: 8456324534304845924}
+  usingBorderImage: {fileID: 2274604372008426627}
+  cooldownText: {fileID: 3574076592716980802}
+  remainInputCountText: {fileID: 5989273896235516357}
+  keyCodeText: {fileID: 4051041824160138040}
 --- !u!1 &2419761840960730347
 GameObject:
   m_ObjectHideFlags: 0

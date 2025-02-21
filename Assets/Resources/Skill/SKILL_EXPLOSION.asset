@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4c79f76f889514f8d2b5f954436db1, type: 3}
+  m_Name: SKILL_EXPLOSION
+  m_EditorClassIdentifier: 
+  categories: []
+  icon: {fileID: 21300000, guid: fde6dab4eb454af459073bef678bc207, type: 3}
+  id: 3
+  codeName: EXPLOSION
+  displayName: "\uB300\uD3ED\uBC1C"
+  description: "$[targetSearcher.searchAction.range] \uBC94\uC704 \uC548\uC758 \uC801\uB4E4\uC5D0\uAC8C
+    <color=red>$[effectAction.totalDamage.0]</color>\uB9CC\uD07C  \uD53C\uD574\uB97C
+    \uC8FC\uACE0, $[duration.1]\uCD08 \uB3D9\uC548 <color=\"purple\">\uAE30\uC808</color>
+    \uC0C1\uD0DC\uB85C \uB9CC\uB4ED\uB2C8\uB2E4. \uBC1C\uB3D9\uC744 \uC704\uD574\uC120
+    $[chargeTime]\uCD08 \uB3D9\uC548 \uCDA9\uC804\uD574\uC57C\uD558\uBA70, \uCD5C\uB300
+    $[chargeDuration]\uCD08\uB3D9\uC548 \uCDA9\uC804\uC774 \uC9C0\uC18D\uB429\uB2C8\uB2E4.
+    \uC0AC\uC6A9\uD558\uC9C0 \uC54A\uC73C\uBA74 \uBC1C\uB3D9\uC774 \uCDE8\uC18C\uB429\uB2C8\uB2E4."
+  type: 0
+  useType: 0
+  executionType: 0
+  applyType: 1
+  needSelectionResultType: 1
+  targetSelectionTimingOption: 0
+  targetSearchTimingOption: 1
+  acquisitionConditions: []
+  acquisitionCosts: []
+  useConditions:
+  - rid: 872920357202034718
+  isAllowLevelExceedDatas: 0
+  maxLevel: 1
+  defaultLevel: 1
+  skillDatas:
+  - level: 1
+    levelUpConditions: []
+    levelUpCosts: []
+    precedingAction:
+      rid: -2
+    action:
+      rid: 872920357202034719
+    runningFinishOption: 0
+    duration: 0
+    applyCount: 1
+    applyCycle: 0
+    cooldown:
+      defaultValue: 20
+      scaleStat: {fileID: 0}
+    targetSearcher:
+      selectionAction:
+        rid: 872920357202034720
+      searchAction:
+        rid: 872920357202034722
+    costs:
+    - rid: 872920357202034724
+    - rid: 872920357202034725
+    isUseCast: 0
+    castTime:
+      defaultValue: 0
+      scaleStat: {fileID: 0}
+    isUseCharge: 1
+    chargeFinishActionOption: 1
+    chargeDuration: 5
+    chargeTime: 3
+    needChargeTimeToUse: 3
+    startChargePower: 0
+    effectSelectors:
+    - level: 1
+      effect: {fileID: 11400000, guid: 3a537431ae3d5f54b9b71982b00781d6, type: 2}
+    - level: 1
+      effect: {fileID: 11400000, guid: 448186ec4a5ce4748a0fac580a4488ac, type: 2}
+    inSkillActionFinishOption: 1
+    castAnimatorParamter:
+      type: 0
+      name: 
+    chargeAnimatorParameter:
+      type: 0
+      name: isCasting
+    precedingActionAnimatorParameter:
+      type: 0
+      name: 
+    actionAnimatorParameter:
+      type: 0
+      name: isClapCast
+    customActionsOnCast: []
+    customActionsOnCharge:
+    - rid: 872920357202034728
+    customActionsOnPrecedingAction: []
+    customActionsOnAction:
+    - rid: 872920357202034729
+    - rid: 872920357202034730
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 872920357202034718
+      type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920357202034719
+      type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920357202034720
+      type: {class: SelectPosition, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: 872920357202034721
+        isUseScale: 1
+        range: 5
+        angle: 360
+        layerMask:
+          serializedVersion: 2
+          m_Bits: 64
+    - rid: 872920357202034721
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 1
+        isAttachIndicatorToRequester: 1
+    - rid: 872920357202034722
+      type: {class: SearchArea, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 1
+        indicatorViewAction:
+          rid: 872920357202034723
+        isUseScale: 0
+        range: 3
+        angle: 360
+        isIncludeSelf: 0
+        isSearchSameCategory: 0
+    - rid: 872920357202034723
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 0
+        isAttachIndicatorToRequester: 0
+    - rid: 872920357202034724
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
+        value:
+          defaultValue: 30
+          scaleStat: {fileID: 0}
+    - rid: 872920357202034725
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: a14c26e18068d564d9b5ad0c069ab271, type: 2}
+        value:
+          defaultValue: 10
+          scaleStat: {fileID: 0}
+    - rid: 872920357202034728
+      type: {class: SpawnObjectAction, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        methodType: 0
+        prefab: {fileID: 5114642830875328933, guid: 1a099cba8510e61469294bf8b48fe6f0,
+          type: 3}
+        offset: {x: 0, y: 0.001, z: 0}
+        scaleFactor: {x: 1, y: 1, z: 1}
+        isAttachToTarget: 1
+        isDestroyOnRelease: 1
+    - rid: 872920357202034729
+      type: {class: SpawnObjectAction, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 1
+        methodType: 1
+        prefab: {fileID: 3448286628185521518, guid: e25396508855cb545a90c3b124a58ff7,
+          type: 3}
+        offset: {x: 0, y: 0, z: 0}
+        scaleFactor: {x: 3, y: 1, z: 3}
+        isAttachToTarget: 0
+        isDestroyOnRelease: 0
+    - rid: 872920357202034730
+      type: {class: CameraShakeAction, ns: , asm: Assembly-CSharp}
+      data: 

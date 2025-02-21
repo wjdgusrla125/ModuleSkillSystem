@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 6864693946488880899}
   - component: {fileID: 6864693946488880898}
   - component: {fileID: 6864693946488880897}
+  - component: {fileID: 6864693946488880896}
   m_Layer: 5
   m_Name: Skill Tooltip
   m_TagString: Untagged
@@ -417,6 +418,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &6864693946488880896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864693946488880910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60653079d7af67448d1d0a802a91625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acquisitionText: {fileID: 1512199333}
+  displayNameText: {fileID: 6864693947962914844}
+  skillTypeText: {fileID: 4048143828734433718}
+  costText: {fileID: 6864693947318384853}
+  cooldownText: {fileID: 141393813}
+  descriptionText: {fileID: 6864693947836736877}
 --- !u!1 &6864693947318384851
 GameObject:
   m_ObjectHideFlags: 0

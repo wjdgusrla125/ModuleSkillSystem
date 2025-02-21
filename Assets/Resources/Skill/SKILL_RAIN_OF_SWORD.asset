@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4c79f76f889514f8d2b5f954436db1, type: 3}
+  m_Name: SKILL_RAIN_OF_SWORD
+  m_EditorClassIdentifier: 
+  categories: []
+  icon: {fileID: 21300000, guid: de3b35b8f06544f46ab3a7fc7cbe502b, type: 3}
+  id: 6
+  codeName: RAIN_OF_SWORD
+  displayName: "\uAC80\uC6B0"
+  description: "\uBC94\uC704 \uC548\uC5D0 \uC788\uB294 \uC801\uC5D0\uAC8C \uC8FC\uAE30\uC801\uC73C\uB85C
+    <color=red>$[effectAction.totalDamage.0]</color>\uB9CC\uD07C \uD53C\uD574\uB97C
+    \uC8FC\uB294 \uAC80\uC6B0\uB97C $[skillAction.duration]\uCD08 \uB3D9\uC548 \uC18C\uD658\uD569\uB2C8\uB2E4."
+  type: 0
+  useType: 0
+  executionType: 0
+  applyType: 0
+  needSelectionResultType: 1
+  targetSelectionTimingOption: 0
+  targetSearchTimingOption: 0
+  acquisitionConditions: []
+  acquisitionCosts: []
+  useConditions:
+  - rid: 872920357202034771
+  isAllowLevelExceedDatas: 0
+  maxLevel: 1
+  defaultLevel: 1
+  skillDatas:
+  - level: 1
+    levelUpConditions: []
+    levelUpCosts: []
+    precedingAction:
+      rid: -2
+    action:
+      rid: 872920357202034772
+    runningFinishOption: 0
+    duration: 0
+    applyCount: 1
+    applyCycle: 0
+    cooldown:
+      defaultValue: 15
+      scaleStat: {fileID: 0}
+    targetSearcher:
+      selectionAction:
+        rid: 872920357202034775
+      searchAction:
+        rid: 872920357202034777
+    costs:
+    - rid: 872920357202034779
+    isUseCast: 0
+    castTime:
+      defaultValue: 0
+      scaleStat: {fileID: 0}
+    isUseCharge: 0
+    chargeFinishActionOption: 0
+    chargeDuration: 0
+    chargeTime: 0
+    needChargeTimeToUse: 0
+    startChargePower: 0
+    effectSelectors:
+    - level: 1
+      effect: {fileID: 11400000, guid: 5064fc5527ca47b4daf3668e73367acc, type: 2}
+    inSkillActionFinishOption: 0
+    castAnimatorParamter:
+      type: 0
+      name: 
+    chargeAnimatorParameter:
+      type: 0
+      name: 
+    precedingActionAnimatorParameter:
+      type: 0
+      name: 
+    actionAnimatorParameter:
+      type: 1
+      name: upHandCast
+    customActionsOnCast: []
+    customActionsOnCharge: []
+    customActionsOnPrecedingAction: []
+    customActionsOnAction: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 872920357202034771
+      type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920357202034772
+      type: {class: SpawnSkillObjectAction, ns: , asm: Assembly-CSharp}
+      data:
+        skillObjectPrefab: {fileID: 1199681872097717848, guid: d9ac8b2ffa752734894d0c439ab85213,
+          type: 3}
+        targetSearcherForSkillObject:
+          selectionAction:
+            rid: 872920357202034773
+          searchAction:
+            rid: 872920357202034774
+        duration: 5
+        applyCount: 6
+        objectScale: {x: 3, y: 3, z: 3}
+    - rid: 872920357202034773
+      type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+    - rid: 872920357202034774
+      type: {class: SearchArea, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+        range: 3
+        angle: 360
+        isIncludeSelf: 0
+        isSearchSameCategory: 0
+    - rid: 872920357202034775
+      type: {class: SelectPosition, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: 872920357202034776
+        isUseScale: 0
+        range: 5
+        angle: 360
+        layerMask:
+          serializedVersion: 2
+          m_Bits: 64
+    - rid: 872920357202034776
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 0
+        isAttachIndicatorToRequester: 1
+    - rid: 872920357202034777
+      type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: 872920357202034778
+        isUseScale: 0
+    - rid: 872920357202034778
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 3
+        indicatorAngleOverride: 360
+        isUseIndicatorFillAmount: 0
+        isAttachIndicatorToRequester: 0
+    - rid: 872920357202034779
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
+        value:
+          defaultValue: 20
+          scaleStat: {fileID: 0}

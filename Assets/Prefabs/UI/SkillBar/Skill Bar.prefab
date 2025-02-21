@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 862984002128056966}
   - component: {fileID: 4802838023755404620}
   - component: {fileID: 1632274958077713224}
+  - component: {fileID: 3600910740826973935}
   m_Layer: 5
   m_Name: Skill Bar
   m_TagString: Untagged
@@ -118,3 +119,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &3600910740826973935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066728050667453688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8af19cd32b2be1438117d008ac22bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotPrefab: {fileID: 1783056509498449081, guid: 608d34ccb4fedbc489a9c64e5740acb7,
+    type: 3}
+  slotCount: 9
