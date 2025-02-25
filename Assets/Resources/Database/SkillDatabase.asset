@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SkillDatabase
   m_EditorClassIdentifier: 
   datas:
-  - {fileID: 11400000, guid: 6f733ca62001d0541809f682b5d1984f, type: 2}
-  - {fileID: 11400000, guid: b5019d84d928ea647a0ea833ccb6d644, type: 2}
-  - {fileID: 11400000, guid: e4548b48a972f244daa1a4a868a37302, type: 2}
-  - {fileID: 11400000, guid: bd15741e501a08e4fbf051e5a249f7b4, type: 2}
-  - {fileID: 11400000, guid: 53aef96108be3e14d9bcb8acf5949d3c, type: 2}
-  - {fileID: 11400000, guid: a2553b9274dbab248b938fbcdf02ac6d, type: 2}
-  - {fileID: 11400000, guid: f098694b848d85045b89f5dfb9083f50, type: 2}
-  - {fileID: 11400000, guid: e6a97cc209ca4054cad206420b322c7a, type: 2}
-  - {fileID: 11400000, guid: f2d94d42a5eb43c4ab19765f40313e3c, type: 2}
+  - {fileID: 11400000, guid: 65b726a18e450b24c8813f73e424982a, type: 2}
+  - {fileID: 11400000, guid: 7536fc7fdc6f4a54486afa6231ce0b2a, type: 2}
+  - {fileID: 11400000, guid: 15de0eff32c82f643b4e48d6abef109f, type: 2}
+  - {fileID: 11400000, guid: 7f0685b86e78a8d4d8460a4c0aba3298, type: 2}
+  - {fileID: 11400000, guid: a81c5408f52a42d489b7efb5acd9dab4, type: 2}
+  - {fileID: 11400000, guid: 23457dfb9de5e8742a17b2ff5b80b2eb, type: 2}
+  - {fileID: 11400000, guid: 5767517727bae7f4981fe9530c9d8699, type: 2}
+  - {fileID: 11400000, guid: 939737d29aeb7df4cbbcd384eda1eba5, type: 2}
+  - {fileID: 11400000, guid: 852b62a0345a6b14ebf1c9f89fcc2050, type: 2}

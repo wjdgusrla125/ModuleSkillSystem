@@ -30,7 +30,7 @@ MonoBehaviour:
   acquisitionConditions: []
   acquisitionCosts: []
   useConditions:
-  - rid: 872920357202034696
+  - rid: 872920447765184541
   isAllowLevelExceedDatas: 0
   maxLevel: 1
   defaultLevel: 1
@@ -39,9 +39,9 @@ MonoBehaviour:
     levelUpConditions: []
     levelUpCosts: []
     precedingAction:
-      rid: 872920357202034697
+      rid: 872920447765184542
     action:
-      rid: 872920357202034700
+      rid: 872920447765184543
     runningFinishOption: 0
     duration: 0
     applyCount: 1
@@ -51,11 +51,11 @@ MonoBehaviour:
       scaleStat: {fileID: 0}
     targetSearcher:
       selectionAction:
-        rid: 872920357202034701
+        rid: 872920447765184544
       searchAction:
-        rid: 872920357202034702
+        rid: 872920447765184545
     costs:
-    - rid: 872920357202034703
+    - rid: 872920447765184546
     isUseCast: 0
     castTime:
       defaultValue: 0
@@ -91,31 +91,31 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 872920357202034696
+    - rid: 872920447765184541
       type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034697
+    - rid: 872920447765184542
       type: {class: RollingAction, ns: , asm: Assembly-CSharp}
       data:
         distance: 5
-    - rid: 872920357202034700
+    - rid: 872920447765184543
       type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034701
+    - rid: 872920447765184544
       type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
-    - rid: 872920357202034702
+    - rid: 872920447765184545
       type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
-    - rid: 872920357202034703
+    - rid: 872920447765184546
       type: {class: StatCost, ns: , asm: Assembly-CSharp}
       data:
         stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}

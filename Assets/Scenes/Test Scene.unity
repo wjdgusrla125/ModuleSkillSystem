@@ -2710,6 +2710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5efc92127dd914897ad12122ec429a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSkillTree: {fileID: 0}
   defaultSkills: []
 --- !u!224 &800318958 stripped
 RectTransform:
@@ -3346,19 +3347,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 995913119, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995913119, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995913119, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995913119, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 450
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995913119, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3366,31 +3367,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 995913119, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -52.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1356798890, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1356798890, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1356798890, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1356798890, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 52.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1356798890, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 175
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1356798890, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -26.065
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1356798891, guid: bcd9b53c7fafff84e9d94b282d5c2417, type: 3}
       propertyPath: m_text
@@ -3414,7 +3415,7 @@ PrefabInstance:
     - target: {fileID: 6503783898558077623, guid: bcd9b53c7fafff84e9d94b282d5c2417,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7182612735644287067, guid: bcd9b53c7fafff84e9d94b282d5c2417,
         type: 3}
@@ -3459,7 +3460,7 @@ PrefabInstance:
     - target: {fileID: 7182612735644287067, guid: bcd9b53c7fafff84e9d94b282d5c2417,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 502.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7182612735644287067, guid: bcd9b53c7fafff84e9d94b282d5c2417,
         type: 3}
@@ -4285,10 +4286,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3985387172020762519}
-    - targetCorrespondingSourceObject: {fileID: 4291817563105933716, guid: dbd571408fc51b741a9c5acb1c507f26,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3985387172020762520}
   m_SourcePrefab: {fileID: 100100000, guid: dbd571408fc51b741a9c5acb1c507f26, type: 3}
 --- !u!1 &3985387172020762505 stripped
 GameObject:
@@ -4391,6 +4388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5efc92127dd914897ad12122ec429a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSkillTree: {fileID: 0}
   defaultSkills: []
 --- !u!114 &3985387172020762519
 MonoBehaviour:
@@ -4405,20 +4403,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpawnPoint: {fileID: 214441264}
---- !u!114 &3985387172020762520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3985387172020762505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a75a1d4b36ec241a1b885b76d418d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4238361481107240022}
-  skill: {fileID: 11400000, guid: bd15741e501a08e4fbf051e5a249f7b4, type: 2}
 --- !u!1001 &4238361481107240019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4667,16 +4651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5efc92127dd914897ad12122ec429a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSkills:
-  - {fileID: 11400000, guid: 6f733ca62001d0541809f682b5d1984f, type: 2}
-  - {fileID: 11400000, guid: b5019d84d928ea647a0ea833ccb6d644, type: 2}
-  - {fileID: 11400000, guid: e4548b48a972f244daa1a4a868a37302, type: 2}
-  - {fileID: 11400000, guid: bd15741e501a08e4fbf051e5a249f7b4, type: 2}
-  - {fileID: 11400000, guid: 53aef96108be3e14d9bcb8acf5949d3c, type: 2}
-  - {fileID: 11400000, guid: a2553b9274dbab248b938fbcdf02ac6d, type: 2}
-  - {fileID: 11400000, guid: f098694b848d85045b89f5dfb9083f50, type: 2}
-  - {fileID: 11400000, guid: e6a97cc209ca4054cad206420b322c7a, type: 2}
-  - {fileID: 11400000, guid: f2d94d42a5eb43c4ab19765f40313e3c, type: 2}
+  defaultSkillTree: {fileID: 11400000, guid: 109c99a5b262ab14ab22ac34de8a4fab, type: 2}
+  defaultSkills: []
 --- !u!114 &4238361481107240040
 MonoBehaviour:
   m_ObjectHideFlags: 0

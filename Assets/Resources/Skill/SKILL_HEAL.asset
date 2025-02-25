@@ -30,18 +30,20 @@ MonoBehaviour:
   acquisitionConditions: []
   acquisitionCosts: []
   useConditions:
-  - rid: 872920357202034713
+  - rid: 872920447765184552
   isAllowLevelExceedDatas: 0
-  maxLevel: 1
+  maxLevel: 3
   defaultLevel: 1
   skillDatas:
   - level: 1
-    levelUpConditions: []
-    levelUpCosts: []
+    levelUpConditions:
+    - rid: 872920447765184553
+    levelUpCosts:
+    - rid: 872920447765184554
     precedingAction:
       rid: -2
     action:
-      rid: 872920357202034714
+      rid: 872920447765184555
     runningFinishOption: 0
     duration: 10
     applyCount: 2
@@ -51,11 +53,119 @@ MonoBehaviour:
       scaleStat: {fileID: 0}
     targetSearcher:
       selectionAction:
-        rid: 872920357202034715
+        rid: 872920447765184556
       searchAction:
-        rid: 872920357202034716
+        rid: 872920447765184557
     costs:
-    - rid: 872920357202034717
+    - rid: 872920447765184558
+    isUseCast: 0
+    castTime:
+      defaultValue: 0
+      scaleStat: {fileID: 0}
+    isUseCharge: 0
+    chargeFinishActionOption: 0
+    chargeDuration: 0
+    chargeTime: 0
+    needChargeTimeToUse: 0
+    startChargePower: 0
+    effectSelectors:
+    - level: 1
+      effect: {fileID: 11400000, guid: 3f83312820e08f448a2e7e87f1bcbbfa, type: 2}
+    inSkillActionFinishOption: 0
+    castAnimatorParamter:
+      type: 0
+      name: 
+    chargeAnimatorParameter:
+      type: 0
+      name: 
+    precedingActionAnimatorParameter:
+      type: 0
+      name: 
+    actionAnimatorParameter:
+      type: 1
+      name: upHandCast
+    customActionsOnCast: []
+    customActionsOnCharge: []
+    customActionsOnPrecedingAction: []
+    customActionsOnAction: []
+  - level: 2
+    levelUpConditions:
+    - rid: 872920447765184559
+    levelUpCosts:
+    - rid: 872920447765184560
+    precedingAction:
+      rid: -2
+    action:
+      rid: 872920447765184561
+    runningFinishOption: 0
+    duration: 10
+    applyCount: 2
+    applyCycle: 2
+    cooldown:
+      defaultValue: 9
+      scaleStat: {fileID: 0}
+    targetSearcher:
+      selectionAction:
+        rid: 872920447765184563
+      searchAction:
+        rid: 872920447765184564
+    costs:
+    - rid: 872920447765184562
+    isUseCast: 0
+    castTime:
+      defaultValue: 0
+      scaleStat: {fileID: 0}
+    isUseCharge: 0
+    chargeFinishActionOption: 0
+    chargeDuration: 0
+    chargeTime: 0
+    needChargeTimeToUse: 0
+    startChargePower: 0
+    effectSelectors:
+    - level: 1
+      effect: {fileID: 11400000, guid: 3f83312820e08f448a2e7e87f1bcbbfa, type: 2}
+    - level: 1
+      effect: {fileID: 11400000, guid: f70e3cd01ba704b46bfded39c3edfa43, type: 2}
+    inSkillActionFinishOption: 0
+    castAnimatorParamter:
+      type: 0
+      name: 
+    chargeAnimatorParameter:
+      type: 0
+      name: 
+    precedingActionAnimatorParameter:
+      type: 0
+      name: 
+    actionAnimatorParameter:
+      type: 1
+      name: upHandCast
+    customActionsOnCast: []
+    customActionsOnCharge: []
+    customActionsOnPrecedingAction: []
+    customActionsOnAction: []
+  - level: 3
+    levelUpConditions:
+    - rid: 872920447765184565
+    levelUpCosts:
+    - rid: 872920447765184566
+    precedingAction:
+      rid: -2
+    action:
+      rid: 872920447765184567
+    runningFinishOption: 0
+    duration: 10
+    applyCount: 2
+    applyCycle: 2
+    cooldown:
+      defaultValue: 8
+      scaleStat: {fileID: 0}
+    targetSearcher:
+      selectionAction:
+        rid: 872920447765184569
+      searchAction:
+        rid: 872920447765184570
+    costs:
+    - rid: 872920447765184568
     isUseCast: 0
     castTime:
       defaultValue: 0
@@ -93,30 +203,114 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 872920357202034713
+    - rid: 872920447765184552
       type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034714
+    - rid: 872920447765184553
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 2
+    - rid: 872920447765184554
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184555
       type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034715
+    - rid: 872920447765184556
       type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
-    - rid: 872920357202034716
+    - rid: 872920447765184557
       type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
-    - rid: 872920357202034717
+    - rid: 872920447765184558
       type: {class: StatCost, ns: , asm: Assembly-CSharp}
       data:
         stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
         value:
           defaultValue: 10
           scaleStat: {fileID: 0}
+    - rid: 872920447765184559
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 3
+    - rid: 872920447765184560
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184561
+      type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920447765184562
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
+        value:
+          defaultValue: 10
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184563
+      type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+    - rid: 872920447765184564
+      type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+    - rid: 872920447765184565
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 4
+    - rid: 872920447765184566
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184567
+      type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 872920447765184568
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
+        value:
+          defaultValue: 10
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184569
+      type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0
+    - rid: 872920447765184570
+      type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
+      data:
+        isShowIndicatorPlayerOnly: 0
+        indicatorViewAction:
+          rid: -2
+        isUseScale: 0

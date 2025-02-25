@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
         entity = GetComponent<Entity>();
         entity.SkillSystem.onSkillTargetSelectionCompleted += ReserveSkill;
 
-
         MouseController.Instance.onLeftClicked += SelectTarget;
     }
 
@@ -21,8 +20,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
         => MouseController.Instance.onRightClicked -= MoveToPosition;
+
     private void OnDestroy()
         => MouseController.Instance.onLeftClicked -= SelectTarget;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            var skillTreeView = SkillTreeView.Instance;
+            if (!skillTreeView.gameObject.activeSelf)
+                skillTreeView.Show(entity, entity.SkillSystem.DefaultSkillTree);
+            else
+                skillTreeView.Hide();
+        }
+    }
 
     private void SelectTarget(Vector2 mousePosition)
     {
@@ -47,18 +59,16 @@ public class PlayerController : MonoBehaviour
 
     private void ReserveSkill(SkillSystem skillSystem, Skill skill, TargetSearcher targetSearcher, TargetSelectionResult result)
     {
-        // 검색 결과가 OutOfRange가 아니거나 Skill이 현재 SearchingTargetState가 아니라면 return으로 빠져나감
-        // Target Select는 Skill의 설정에 따라서 여러 곳에서 일어날 수 있는데,
-        // Skill이 SearchingTargetState일 때만 예약을 시도함
         if (result.resultMessage != SearchResultMessage.OutOfRange ||
             !skill.IsInState<SearchingTargetState>())
             return;
-
+        
         entity.SkillSystem.ReserveSkill(skill);
 
-        if (result.selectedTarget)
-            entity.Movement.TraceTarget = result.selectedTarget.transform;
+        var selectionResult = skill.TargetSelectionResult;
+        if (selectionResult.selectedTarget)
+            entity.Movement.TraceTarget = selectionResult.selectedTarget.transform;
         else
-            entity.Movement.Destination = result.selectedPosition;
+            entity.Movement.Destination = selectionResult.selectedPosition;
     }
 }

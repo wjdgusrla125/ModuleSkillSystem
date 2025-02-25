@@ -26,8 +26,10 @@ MonoBehaviour:
   needSelectionResultType: 0
   targetSelectionTimingOption: 0
   targetSearchTimingOption: 0
-  acquisitionConditions: []
-  acquisitionCosts: []
+  acquisitionConditions:
+  - rid: 872920447765184547
+  acquisitionCosts:
+  - rid: 872920447765184548
   useConditions: []
   isAllowLevelExceedDatas: 0
   maxLevel: 1
@@ -39,7 +41,7 @@ MonoBehaviour:
     precedingAction:
       rid: -2
     action:
-      rid: 872920357202034704
+      rid: 872920447765184549
     runningFinishOption: 0
     duration: 0
     applyCount: 1
@@ -49,9 +51,9 @@ MonoBehaviour:
       scaleStat: {fileID: 0}
     targetSearcher:
       selectionAction:
-        rid: 872920357202034705
+        rid: 872920447765184550
       searchAction:
-        rid: 872920357202034706
+        rid: 872920447765184551
     costs: []
     isUseCast: 0
     castTime:
@@ -88,17 +90,29 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 872920357202034704
+    - rid: 872920447765184547
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 5
+    - rid: 872920447765184548
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184549
       type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034705
+    - rid: 872920447765184550
       type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
-    - rid: 872920357202034706
+    - rid: 872920447765184551
       type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0

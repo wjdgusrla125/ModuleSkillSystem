@@ -30,10 +30,10 @@ public class SkillTooltip : MonoSingleton<SkillTooltip>
         acquisitionText.gameObject.SetActive(false);
 
         displayNameText.text = skill.DisplayName;
-        var skillTypeName = skill.Type == SkillType.Active ? "¾×Æ¼ºê" : "ÆÐ½Ãºê";
+        var skillTypeName = skill.Type == SkillType.Active ? "ì•¡í‹°ë¸Œ" : "íŒ¨ì‹œë¸Œ";
         skillTypeText.text = $"[{skillTypeName}]";
         costText.text = BuildCostText(skill);
-        cooldownText.text = $"Àç»ç¿ë ´ë±â ½Ã°£: {skill.Cooldown:0.##}ÃÊ";
+        cooldownText.text = $"ìž¬ì‚¬ìš© ëŒ€ê¸° ì‹œê°„: {skill.Cooldown:0.##}ì´ˆ";
         descriptionText.text = skill.Description;
 
         transform.position = Input.mousePosition;
@@ -45,14 +45,50 @@ public class SkillTooltip : MonoSingleton<SkillTooltip>
         gameObject.SetActive(true);
     }
 
+    public void Show(SkillTreeSlotView slotView)
+    {
+        if (slotView.RequesterOwnedSkill)
+        {
+            Show(slotView.RequesterOwnedSkill);
+
+            var skill = slotView.RequesterOwnedSkill;
+            if (!skill.IsMaxLevel)
+                TryShowConditionText(skill.Owner, "ë ˆë²¨ ì—… ì¡°ê±´", skill.LevelUpConditions, skill.LevelUpCosts);
+        }
+        else
+        {
+            var entity = slotView.Requester;
+            var slotSkill = slotView.SlotSkill;
+            var temporarySkill = slotSkill.Clone() as Skill;
+            temporarySkill.Setup(entity);
+
+            Show(temporarySkill);
+            Destroy(temporarySkill);
+
+            TryShowConditionText(entity, "ìŠµë“ ì¡°ê±´", slotSkill.AcquisitionConditions, slotSkill.AcquisitionCosts);
+        }
+    }
+
     public void Hide() => gameObject.SetActive(false);
+
+    private void TryShowConditionText(Entity entity, string prefixText,
+        IReadOnlyList<EntityCondition> conditions, IReadOnlyList<Cost> costs)
+    {
+        var isShowable = conditions.Count > 0 || costs.Count > 0;
+
+        if (!isShowable)
+            return;
+
+        acquisitionText.gameObject.SetActive(true);
+        acquisitionText.text = BuildConditionText(entity, prefixText, conditions, costs);
+    }
 
     private string BuildCostText(Skill skill)
     {
-        stringBuilder.Append("ºñ¿ë: ");
+        stringBuilder.Append("ë¹„ìš©: ");
 
         if (skill.IsToggleType)
-            stringBuilder.Append("ÃÊ´ç ");
+            stringBuilder.Append("ì´ˆë‹¹ ");
 
         int costLength = skill.Costs.Count;
         for (int i = 0; i < costLength; i++)
@@ -67,6 +103,43 @@ public class SkillTooltip : MonoSingleton<SkillTooltip>
         }
 
         var result = stringBuilder.ToString();
+        stringBuilder.Clear();
+
+        return result;
+    }
+
+    private string BuildConditionText(Entity entity, string prefixText,
+    IReadOnlyList<EntityCondition> conditions, IReadOnlyList<Cost> costs)
+    {
+        stringBuilder.Append(prefixText);
+        stringBuilder.Append(": ");
+
+        for (int i = 0; i < conditions.Count; i++)
+        {
+            var condition = conditions[i];
+            stringBuilder.Append("<color=");
+            stringBuilder.Append(condition.IsPass(entity) ? "white>" : "red>");
+            stringBuilder.Append(condition.Description);
+            stringBuilder.Append("</color>");
+
+            if (i != conditions.Count - 1)
+                stringBuilder.Append(", ");
+        }
+
+        for (int i = 0; i < costs.Count; i++)
+        {
+            var cost = costs[i];
+
+            stringBuilder.Append(", ");
+            stringBuilder.Append("<color=");
+            stringBuilder.Append(cost.HasEnoughCost(entity) ? "white>" : "red>");
+            stringBuilder.Append(costs[i].Description);
+            stringBuilder.Append(' ');
+            stringBuilder.Append(costs[i].GetValue(entity));
+            stringBuilder.Append("</color>");
+        }
+
+        string result = stringBuilder.ToString();
         stringBuilder.Clear();
 
         return result;

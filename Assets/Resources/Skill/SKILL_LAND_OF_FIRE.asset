@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: e1223c43e85dd8248838c0975b9da8d0, type: 3}
   id: 8
   codeName: LAND_OF_FIRE
-  displayName: "\uBD88\uC758 \uB300"
+  displayName: "\uBD88\uC758 \uB300\uC9C0"
   description: "\uC8FC\uBCC0\uC744 \uBD88\uD0DC\uC6CC $[applyCycle]\uCD08\uB9C8\uB2E4
     <color=red>$[effectAction.totalDamage.0]</color> \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
   type: 0
@@ -26,8 +26,10 @@ MonoBehaviour:
   needSelectionResultType: 0
   targetSelectionTimingOption: 0
   targetSearchTimingOption: 1
-  acquisitionConditions: []
-  acquisitionCosts: []
+  acquisitionConditions:
+  - rid: 872920447765184618
+  acquisitionCosts:
+  - rid: 872920447765184619
   useConditions: []
   isAllowLevelExceedDatas: 0
   maxLevel: 1
@@ -39,7 +41,7 @@ MonoBehaviour:
     precedingAction:
       rid: -2
     action:
-      rid: 872920357202034791
+      rid: 872920447765184620
     runningFinishOption: 1
     duration: 0
     applyCount: 0
@@ -49,11 +51,11 @@ MonoBehaviour:
       scaleStat: {fileID: 0}
     targetSearcher:
       selectionAction:
-        rid: 872920357202034792
+        rid: 872920447765184621
       searchAction:
-        rid: 872920357202034793
+        rid: 872920447765184622
     costs:
-    - rid: 872920357202034794
+    - rid: 872920447765184623
     isUseCast: 0
     castTime:
       defaultValue: 0
@@ -84,23 +86,35 @@ MonoBehaviour:
     customActionsOnCharge: []
     customActionsOnPrecedingAction: []
     customActionsOnAction:
-    - rid: 872920357202034795
+    - rid: 872920447765184629
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 872920357202034791
+    - rid: 872920447765184618
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 3
+    - rid: 872920447765184619
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184620
       type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034792
+    - rid: 872920447765184621
       type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
-    - rid: 872920357202034793
+    - rid: 872920447765184622
       type: {class: SearchArea, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
@@ -111,14 +125,14 @@ MonoBehaviour:
         angle: 360
         isIncludeSelf: 0
         isSearchSameCategory: 0
-    - rid: 872920357202034794
+    - rid: 872920447765184623
       type: {class: StatCost, ns: , asm: Assembly-CSharp}
       data:
         stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
         value:
           defaultValue: 5
           scaleStat: {fileID: 0}
-    - rid: 872920357202034795
+    - rid: 872920447765184629
       type: {class: SpawnObjectAction, ns: , asm: Assembly-CSharp}
       data:
         targetType: 0

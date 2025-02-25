@@ -27,10 +27,12 @@ MonoBehaviour:
   needSelectionResultType: 1
   targetSelectionTimingOption: 0
   targetSearchTimingOption: 0
-  acquisitionConditions: []
-  acquisitionCosts: []
+  acquisitionConditions:
+  - rid: 872920447765184598
+  acquisitionCosts:
+  - rid: 872920447765184599
   useConditions:
-  - rid: 872920357202034771
+  - rid: 872920447765184600
   isAllowLevelExceedDatas: 0
   maxLevel: 1
   defaultLevel: 1
@@ -41,7 +43,7 @@ MonoBehaviour:
     precedingAction:
       rid: -2
     action:
-      rid: 872920357202034772
+      rid: 872920447765184601
     runningFinishOption: 0
     duration: 0
     applyCount: 1
@@ -51,11 +53,11 @@ MonoBehaviour:
       scaleStat: {fileID: 0}
     targetSearcher:
       selectionAction:
-        rid: 872920357202034775
+        rid: 872920447765184604
       searchAction:
-        rid: 872920357202034777
+        rid: 872920447765184606
     costs:
-    - rid: 872920357202034779
+    - rid: 872920447765184609
     isUseCast: 0
     castTime:
       defaultValue: 0
@@ -91,30 +93,42 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 872920357202034771
+    - rid: 872920447765184598
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 5
+    - rid: 872920447765184599
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184600
       type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034772
+    - rid: 872920447765184601
       type: {class: SpawnSkillObjectAction, ns: , asm: Assembly-CSharp}
       data:
         skillObjectPrefab: {fileID: 1199681872097717848, guid: d9ac8b2ffa752734894d0c439ab85213,
           type: 3}
         targetSearcherForSkillObject:
           selectionAction:
-            rid: 872920357202034773
+            rid: 872920447765184602
           searchAction:
-            rid: 872920357202034774
+            rid: 872920447765184603
         duration: 5
         applyCount: 6
         objectScale: {x: 3, y: 3, z: 3}
-    - rid: 872920357202034773
+    - rid: 872920447765184602
       type: {class: SelectSelf, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
-    - rid: 872920357202034774
+    - rid: 872920447765184603
       type: {class: SearchArea, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
@@ -125,35 +139,26 @@ MonoBehaviour:
         angle: 360
         isIncludeSelf: 0
         isSearchSameCategory: 0
-    - rid: 872920357202034775
+    - rid: 872920447765184604
       type: {class: SelectPosition, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
-          rid: 872920357202034776
+          rid: 872920447765184608
         isUseScale: 0
         range: 5
         angle: 360
         layerMask:
           serializedVersion: 2
           m_Bits: 64
-    - rid: 872920357202034776
-      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
-      data:
-        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
-          type: 3}
-        indicatorRadiusOverride: 0
-        indicatorAngleOverride: 0
-        isUseIndicatorFillAmount: 0
-        isAttachIndicatorToRequester: 1
-    - rid: 872920357202034777
+    - rid: 872920447765184606
       type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
-          rid: 872920357202034778
+          rid: 872920447765184607
         isUseScale: 0
-    - rid: 872920357202034778
+    - rid: 872920447765184607
       type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
       data:
         indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
@@ -162,7 +167,16 @@ MonoBehaviour:
         indicatorAngleOverride: 360
         isUseIndicatorFillAmount: 0
         isAttachIndicatorToRequester: 0
-    - rid: 872920357202034779
+    - rid: 872920447765184608
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 0
+        isAttachIndicatorToRequester: 1
+    - rid: 872920447765184609
       type: {class: StatCost, ns: , asm: Assembly-CSharp}
       data:
         stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}

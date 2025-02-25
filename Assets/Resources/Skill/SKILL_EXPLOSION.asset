@@ -31,10 +31,12 @@ MonoBehaviour:
   needSelectionResultType: 1
   targetSelectionTimingOption: 0
   targetSearchTimingOption: 1
-  acquisitionConditions: []
-  acquisitionCosts: []
+  acquisitionConditions:
+  - rid: 872920447765184571
+  acquisitionCosts:
+  - rid: 872920447765184572
   useConditions:
-  - rid: 872920357202034718
+  - rid: 872920447765184573
   isAllowLevelExceedDatas: 0
   maxLevel: 1
   defaultLevel: 1
@@ -45,7 +47,7 @@ MonoBehaviour:
     precedingAction:
       rid: -2
     action:
-      rid: 872920357202034719
+      rid: 872920447765184574
     runningFinishOption: 0
     duration: 0
     applyCount: 1
@@ -55,12 +57,12 @@ MonoBehaviour:
       scaleStat: {fileID: 0}
     targetSearcher:
       selectionAction:
-        rid: 872920357202034720
+        rid: 872920447765184575
       searchAction:
-        rid: 872920357202034722
+        rid: 872920447765184576
     costs:
-    - rid: 872920357202034724
-    - rid: 872920357202034725
+    - rid: 872920447765184578
+    - rid: 872920447765184579
     isUseCast: 0
     castTime:
       defaultValue: 0
@@ -76,7 +78,7 @@ MonoBehaviour:
       effect: {fileID: 11400000, guid: 3a537431ae3d5f54b9b71982b00781d6, type: 2}
     - level: 1
       effect: {fileID: 11400000, guid: 448186ec4a5ce4748a0fac580a4488ac, type: 2}
-    inSkillActionFinishOption: 1
+    inSkillActionFinishOption: 2
     castAnimatorParamter:
       type: 0
       name: 
@@ -91,55 +93,57 @@ MonoBehaviour:
       name: isClapCast
     customActionsOnCast: []
     customActionsOnCharge:
-    - rid: 872920357202034728
+    - rid: 872920447765184632
     customActionsOnPrecedingAction: []
     customActionsOnAction:
-    - rid: 872920357202034729
-    - rid: 872920357202034730
+    - rid: 872920447765184636
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 872920357202034718
+    - rid: 872920447765184571
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 9
+    - rid: 872920447765184572
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184573
       type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034719
+    - rid: 872920447765184574
       type: {class: InstantApplyAction, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034720
+    - rid: 872920447765184575
       type: {class: SelectPosition, ns: , asm: Assembly-CSharp}
       data:
-        isShowIndicatorPlayerOnly: 0
+        isShowIndicatorPlayerOnly: 1
         indicatorViewAction:
-          rid: 872920357202034721
+          rid: 872920447765184634
         isUseScale: 1
         range: 5
         angle: 360
         layerMask:
           serializedVersion: 2
           m_Bits: 64
-    - rid: 872920357202034721
-      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
-      data:
-        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
-          type: 3}
-        indicatorRadiusOverride: 0
-        indicatorAngleOverride: 0
-        isUseIndicatorFillAmount: 1
-        isAttachIndicatorToRequester: 1
-    - rid: 872920357202034722
+    - rid: 872920447765184576
       type: {class: SearchArea, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 1
         indicatorViewAction:
-          rid: 872920357202034723
+          rid: 872920447765184577
         isUseScale: 0
         range: 3
         angle: 360
         isIncludeSelf: 0
         isSearchSameCategory: 0
-    - rid: 872920357202034723
+    - rid: 872920447765184577
       type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
       data:
         indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
@@ -148,21 +152,21 @@ MonoBehaviour:
         indicatorAngleOverride: 0
         isUseIndicatorFillAmount: 0
         isAttachIndicatorToRequester: 0
-    - rid: 872920357202034724
+    - rid: 872920447765184578
       type: {class: StatCost, ns: , asm: Assembly-CSharp}
       data:
         stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
         value:
           defaultValue: 30
           scaleStat: {fileID: 0}
-    - rid: 872920357202034725
+    - rid: 872920447765184579
       type: {class: StatCost, ns: , asm: Assembly-CSharp}
       data:
         stat: {fileID: 11400000, guid: a14c26e18068d564d9b5ad0c069ab271, type: 2}
         value:
           defaultValue: 10
           scaleStat: {fileID: 0}
-    - rid: 872920357202034728
+    - rid: 872920447765184632
       type: {class: SpawnObjectAction, ns: , asm: Assembly-CSharp}
       data:
         targetType: 0
@@ -173,7 +177,16 @@ MonoBehaviour:
         scaleFactor: {x: 1, y: 1, z: 1}
         isAttachToTarget: 1
         isDestroyOnRelease: 1
-    - rid: 872920357202034729
+    - rid: 872920447765184634
+      type: {class: CircleIndicatorViewAction, ns: , asm: Assembly-CSharp}
+      data:
+        indicatorPrefab: {fileID: 7545020625849464054, guid: 88ac463087731ca4198b3020e39675d7,
+          type: 3}
+        indicatorRadiusOverride: 0
+        indicatorAngleOverride: 0
+        isUseIndicatorFillAmount: 1
+        isAttachIndicatorToRequester: 1
+    - rid: 872920447765184636
       type: {class: SpawnObjectAction, ns: , asm: Assembly-CSharp}
       data:
         targetType: 1
@@ -184,6 +197,3 @@ MonoBehaviour:
         scaleFactor: {x: 3, y: 1, z: 3}
         isAttachToTarget: 0
         isDestroyOnRelease: 0
-    - rid: 872920357202034730
-      type: {class: CameraShakeAction, ns: , asm: Assembly-CSharp}
-      data: 

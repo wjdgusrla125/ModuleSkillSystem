@@ -6,43 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="d073c2f4-7d56-44c0-bbdc-87ffc2ca343c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Entity Animation Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Entity Animation Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Skill/Clap Cast.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Skill/Clap Cast.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Skill/Magic Area Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Skill/Magic Area Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Skill/Standing Shoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Skill/Standing Shoot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effects/Skill/Dark Sphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Skill/Dark Sphere.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effects/Skill/Magic Circle 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Skill/Magic Circle 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effects/Skill/Poison Field.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Skill/Poison Field.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Effects/Skill/Sword Rain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Effects/Skill/Sword Rain.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Entity HUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Entity HUD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/FloatingText/Floating Text View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/FloatingText/Floating Text View.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Skill Progress Bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Skill Progress Bar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Skill Tooltip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Skill Tooltip.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillBar/Skill Bar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillBar/Skill Bar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillBar/Skill Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillBar/Skill Slot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillEffectView/Player Skill Effect List View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillEffectView/Player Skill Effect List View.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillEffectView/Skill Effect List View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillEffectView/Skill Effect List View.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillEffectView/Skill Effect View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillEffectView/Skill Effect View.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Category/CATEGORY_RELATIONSHIP_FRIEND.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Category/CATEGORY_RELATIONSHIP_FRIEND.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Category/CATEGORY_RELATIONSHIP_HOSPITLE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Category/CATEGORY_RELATIONSHIP_HOSPITLE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Category/CATEGORY_dd961725-292a-44da-bf2d-2f27e46d80a8.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Category/CATEGORY_dd961725-292a-44da-bf2d-2f27e46d80a8.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/CategoryDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/CategoryDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree Slot View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree Slot View.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree View.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_TEST_EFFECT.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_TEST_EFFECT.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_Test.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_Test.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_TEST_SKILL.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_TEST_SKILL.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Stat/STAT_HP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Stat/STAT_HP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Animation/EntityBaseLayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Animation/EntityBaseLayerBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Entity/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/TargetSearcher/TargetSearchAction/TargetSearchAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/TargetSearcher/TargetSearchAction/TargetSearchAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/TargetSearcher/TargetSelectionAction/TargetSelectionAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/TargetSearcher/TargetSelectionAction/TargetSelectionAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UI/SkillTooltip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/UI/SkillTooltip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +136,11 @@
       <workItem from="1740125780594" duration="847000" />
       <workItem from="1740127239566" duration="632000" />
       <workItem from="1740129635654" duration="4008000" />
+      <workItem from="1740472459825" duration="397000" />
+      <workItem from="1740472901486" duration="6000" />
+      <workItem from="1740472913761" duration="8000" />
+      <workItem from="1740472927618" duration="1875000" />
+      <workItem from="1740476761243" duration="2000" />
     </task>
     <servers />
   </component>

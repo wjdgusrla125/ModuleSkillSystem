@@ -26,6 +26,9 @@ public class SkillSystem : MonoBehaviour
     #endregion
 
     [SerializeField]
+    private SkillTree defaultSkillTree;
+
+    [SerializeField]
     private Skill[] defaultSkills;
 
     private List<Skill> ownSkills = new();
@@ -36,10 +39,13 @@ public class SkillSystem : MonoBehaviour
     private List<Effect> runningEffects = new();
     private Queue<Effect> destroyEffectQueue = new();
 
+    private List<SkillTreeSlotNode> autoAcquisitionSlots = new();
+
     public Entity Owner { get; private set; }
     public IReadOnlyList<Skill> OwnSkills => ownSkills;
     public IReadOnlyList<Skill> RunningSkills => runningSkills;
-    public IReadOnlyList<Effect> RunningEffects => runningEffects;
+    public IReadOnlyList<Effect> RunningEffects => runningEffects.Where(x => !x.IsReleased).ToArray();
+    public SkillTree DefaultSkillTree => defaultSkillTree;
 
     public event SkillRegisteredHandler onSkillRegistered;
     public event SkillUnregisteredHandler onSkillUnregistered;
@@ -71,6 +77,7 @@ public class SkillSystem : MonoBehaviour
         UpdateRunningEffects();
         DestroyReleasedEffects();
         UpdateReservedSkill();
+        TryAcquireSkills();
     }
 
     public void Setup(Entity entity)
@@ -84,6 +91,20 @@ public class SkillSystem : MonoBehaviour
     {
         foreach (var skill in defaultSkills)
             RegisterWithoutCost(skill);
+
+        if (!defaultSkillTree)
+            return;
+
+        foreach (var skillSlotNode in defaultSkillTree.GetSlotNodes())
+        {
+            if (!skillSlotNode.IsSkillAutoAcquire)
+                continue;
+
+            if (skillSlotNode.IsSkillAcquirable(Owner))
+                skillSlotNode.AcquireSkill(Owner);
+            else
+                autoAcquisitionSlots.Add(skillSlotNode);
+        }
     }
 
     public Skill RegisterWithoutCost(Skill skill, int level = 0)
@@ -128,7 +149,7 @@ public class SkillSystem : MonoBehaviour
         if (skill == null)
             return false;
 
-        skill.Cancel(true);
+        skill.Cancel();
         ownSkills.Remove(skill);
 
         onSkillUnregistered?.Invoke(this, skill);
@@ -146,10 +167,7 @@ public class SkillSystem : MonoBehaviour
 
     private void UpdateRunningEffects()
     {
-        // Update된 Effect에 의해서 새로운 Effect가 runningEffects에 추가될 수도 있으므로,
-        // foreach문이 아닌 for문으로 순회함
-        int count = runningEffects.Count;
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < runningEffects.Count; i++)
         {
             var effect = runningEffects[i];
             if (effect.IsReleased)
@@ -178,15 +196,28 @@ public class SkillSystem : MonoBehaviour
             return;
 
         var selectionResult = reservedSkill.TargetSelectionResult;
-        // selectionResult가 Target이면 해당 Target의 위치를, 아니면 선택된 위치를 가져옴.
         var targetPosition = selectionResult.selectedTarget?.transform.position ?? selectionResult.selectedPosition;
-        // Target이 Skill의 범위 안에 들어왔을 때,
-        // Skill이 사용 가능한 상태면 사용, 사용이 불가능하다면 사용 예약을 취소함
         if (reservedSkill.IsInRange(targetPosition))
         {
             if (reservedSkill.IsUseable)
                 reservedSkill.UseImmediately(targetPosition);
             reservedSkill = null;
+        }
+    }
+
+    private void TryAcquireSkills()
+    {
+        if (autoAcquisitionSlots.Count == 0)
+            return;
+
+        for (int i = autoAcquisitionSlots.Count - 1; i >= 0; i--)
+        {
+            var node = autoAcquisitionSlots[i];
+            if (node.IsSkillAcquirable(Owner))
+            {
+                node.AcquireSkill(Owner);
+                autoAcquisitionSlots.RemoveAt(i);
+            }
         }
     }
 
@@ -219,21 +250,17 @@ public class SkillSystem : MonoBehaviour
     public void Apply(Effect effect)
     {
         var runningEffect = Find(effect);
-        // 새로운 Effect거나 Effect의 중복 적용이 허용된다면 Effect를 적용함
         if (runningEffect == null || effect.IsAllowDuplicate)
             ApplyNewEffect(effect);
         else
         {
-            // Stack이 쌓이는 Effect라면 Stack을 쌓음
             if (runningEffect.MaxStack > 1)
                 runningEffect.CurrentStack++;
-            // Effect의 RemoveDuplicateTargetOption이 Old(이미 적용 중인 Effect)라면 기존 Effect를 지우고, Effect를 새로 적용함
             else if (runningEffect.RemoveDuplicateTargetOption == EffectRemoveDuplicateTargetOption.Old)
             {
                 RemoveEffect(runningEffect);
                 ApplyNewEffect(effect);
             }
-            // 그 외의 경우는 RemoveDuplicateTargetOption이 New라는 의미이므로 새로 들어온 Effect를 무시함
         }
     }
 
@@ -258,10 +285,10 @@ public class SkillSystem : MonoBehaviour
         return skill.Use();
     }
 
-    public bool Cancel(Skill skill, bool isForce = false)
+    public bool Cancel(Skill skill)
     {
-        skill = Find(skill);
-        return skill?.Cancel(isForce) ?? false;
+        skill = runningSkills.FirstOrDefault(x => x.ID == skill.ID);
+        return skill.Cancel();
     }
 
     public void CancelAll(bool isForce = false)
@@ -269,7 +296,7 @@ public class SkillSystem : MonoBehaviour
         CancelTargetSearching();
 
         foreach (var skill in runningSkills.ToArray())
-            skill.Cancel(isForce);
+            skill.Cancel();
     }
 
     public Skill Find(Skill skill)
@@ -339,8 +366,6 @@ public class SkillSystem : MonoBehaviour
     public void CancelTargetSearching()
         => ownSkills.Find(x => x.IsInState<SearchingTargetState>())?.Cancel();
 
-    // Animation에서 호출된 Animation Event 함수
-    // 실행 중인 Skill을 발동(Apply)시킴
     private void ApplyCurrentRunningSkill()
     {
         if (Owner.StateMachine.GetCurrentState() is InSkillActionState ownerState)
@@ -374,7 +399,6 @@ public class SkillSystem : MonoBehaviour
 
     private void OnSkillApplied(Skill skill, int currentApplyCount)
         => onSkillApplied?.Invoke(this, skill, currentApplyCount);
-
     private void OnSkillTargetSelectionCompleted(Skill skill, TargetSearcher targetSearcher, TargetSelectionResult result)
     {
         if (result.resultMessage == SearchResultMessage.FindTarget || result.resultMessage == SearchResultMessage.FindPosition)

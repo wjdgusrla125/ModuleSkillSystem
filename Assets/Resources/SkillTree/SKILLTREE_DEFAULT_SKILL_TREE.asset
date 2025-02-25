@@ -1,0 +1,526 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8201308068810910803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: -408, y: -40}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: -8201308068810910803}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: -8201308068810910803}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: precedingLevels 0
+        node: {fileID: 4019711395907167517}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  tier: 0
+  index: 0
+  skill: {fileID: 11400000, guid: 9a72a61bf32e90c47831b0013116e0e0, type: 2}
+  isSkillAutoAcquire: 1
+  precedingLevels: 
+  thisNode: {fileID: -8201308068810910803}
+--- !u!114 &-6166563682591210808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: -456, y: -1528}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: -6166563682591210808}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: -6166563682591210808}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: precedingLevels 0
+        node: {fileID: 9005718801625762599}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  tier: 0
+  index: 3
+  skill: {fileID: 11400000, guid: 5c42297e27fbafa40ac5891aeea59fd1, type: 2}
+  isSkillAutoAcquire: 1
+  precedingLevels: 
+  thisNode: {fileID: -6166563682591210808}
+--- !u!114 &-779196152315519160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: 1016, y: -1032}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    - precedingLevels 0
+    - precedingLevels 1
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: -779196152315519160}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: -779196152315519160}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: precedingLevels 0
+      _node: {fileID: -779196152315519160}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: thisNode
+        node: {fileID: 5432600433701452270}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: precedingLevels 1
+      _node: {fileID: -779196152315519160}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: thisNode
+        node: {fileID: 202482464248872649}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  tier: 4
+  index: 2
+  skill: {fileID: 11400000, guid: 279c7cec3b9394244a849d4e587ff578, type: 2}
+  isSkillAutoAcquire: 0
+  precedingLevels: 0100000001000000
+  thisNode: {fileID: -779196152315519160}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b7dac7d9b1f8e4da5ed5153327f2d8, type: 3}
+  m_Name: SKILLTREE_DEFAULT_SKILL_TREE
+  m_EditorClassIdentifier: 
+  categories: []
+  icon: {fileID: 0}
+  id: 0
+  codeName: DEFAULT_SKILL_TREE
+  displayName: "\uC2A4\uD0AC \uD2B8\uB9AC"
+  description: 
+  graph: {fileID: 6888926335036314612}
+--- !u!114 &202482464248872649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: 280, y: -552}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    - precedingLevels 0
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: 202482464248872649}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: 202482464248872649}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: precedingLevels 1
+        node: {fileID: -779196152315519160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: precedingLevels 0
+      _node: {fileID: 202482464248872649}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: thisNode
+        node: {fileID: 1707108343617753886}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  tier: 2
+  index: 1
+  skill: {fileID: 11400000, guid: 8fa3df1537400c24894de3a0d8f07c13, type: 2}
+  isSkillAutoAcquire: 0
+  precedingLevels: 01000000
+  thisNode: {fileID: 202482464248872649}
+--- !u!114 &1707108343617753886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: -88, y: -552}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: 1707108343617753886}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: 1707108343617753886}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: precedingLevels 0
+        node: {fileID: 202482464248872649}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  tier: 1
+  index: 1
+  skill: {fileID: 11400000, guid: 836c6cde92c98f247b33c02fc3a94601, type: 2}
+  isSkillAutoAcquire: 0
+  precedingLevels: 
+  thisNode: {fileID: 1707108343617753886}
+--- !u!114 &4019711395907167517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: 280, y: -40}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    - precedingLevels 0
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: 4019711395907167517}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: 4019711395907167517}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: precedingLevels 0
+      _node: {fileID: 4019711395907167517}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: thisNode
+        node: {fileID: -8201308068810910803}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  tier: 2
+  index: 0
+  skill: {fileID: 11400000, guid: 636a2567435cd1544832353e46076aa1, type: 2}
+  isSkillAutoAcquire: 0
+  precedingLevels: 01000000
+  thisNode: {fileID: 4019711395907167517}
+--- !u!114 &4306925782015377264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: 648, y: -1512}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    - precedingLevels 0
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: 4306925782015377264}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: 4306925782015377264}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: precedingLevels 0
+      _node: {fileID: 4306925782015377264}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: thisNode
+        node: {fileID: 9005718801625762599}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  tier: 3
+  index: 3
+  skill: {fileID: 11400000, guid: 8baf889bf11dc2340a411b9a09d2ca2f, type: 2}
+  isSkillAutoAcquire: 0
+  precedingLevels: 01000000
+  thisNode: {fileID: 4306925782015377264}
+--- !u!114 &5432600433701452270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: -88, y: -1032}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: 5432600433701452270}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: 5432600433701452270}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: precedingLevels 0
+        node: {fileID: -779196152315519160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  tier: 1
+  index: 2
+  skill: {fileID: 11400000, guid: 0c588a58d96c82741a384aa8542f315d, type: 2}
+  isSkillAutoAcquire: 0
+  precedingLevels: 
+  thisNode: {fileID: 5432600433701452270}
+--- !u!114 &6888926335036314612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0c8df747b3bf045a9419f793520fb7, type: 3}
+  m_Name: Skill Tree Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -6166563682591210808}
+  - {fileID: -8201308068810910803}
+  - {fileID: 5432600433701452270}
+  - {fileID: 1707108343617753886}
+  - {fileID: 9005718801625762599}
+  - {fileID: 202482464248872649}
+  - {fileID: 4019711395907167517}
+  - {fileID: 4306925782015377264}
+  - {fileID: -779196152315519160}
+--- !u!114 &9005718801625762599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68271ff123cfba24baecbf83f5f157dd, type: 3}
+  m_Name: Skill Tree Slot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 6888926335036314612}
+  position: {x: 280, y: -1512}
+  ports:
+    keys:
+    - precedingLevels
+    - thisNode
+    - precedingLevels 0
+    values:
+    - _fieldName: precedingLevels
+      _node: {fileID: 9005718801625762599}
+      _typeQualifiedName: System.Int32[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: thisNode
+      _node: {fileID: 9005718801625762599}
+      _typeQualifiedName: SkillTreeSlotNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: precedingLevels 0
+        node: {fileID: 4306925782015377264}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: precedingLevels 0
+      _node: {fileID: 9005718801625762599}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: thisNode
+        node: {fileID: -6166563682591210808}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  tier: 2
+  index: 3
+  skill: {fileID: 11400000, guid: 7e359509094ab75449a44654fa626d81, type: 2}
+  isSkillAutoAcquire: 0
+  precedingLevels: 03000000
+  thisNode: {fileID: 9005718801625762599}

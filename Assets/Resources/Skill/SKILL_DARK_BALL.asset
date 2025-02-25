@@ -28,10 +28,12 @@ MonoBehaviour:
   needSelectionResultType: 1
   targetSelectionTimingOption: 0
   targetSearchTimingOption: 0
-  acquisitionConditions: []
-  acquisitionCosts: []
+  acquisitionConditions:
+  - rid: 872920447765184580
+  acquisitionCosts:
+  - rid: 872920447765184581
   useConditions:
-  - rid: 872920357202034745
+  - rid: 872920447765184582
   isAllowLevelExceedDatas: 0
   maxLevel: 1
   defaultLevel: 1
@@ -42,7 +44,7 @@ MonoBehaviour:
     precedingAction:
       rid: -2
     action:
-      rid: 872920357202034746
+      rid: 872920447765184583
     runningFinishOption: 0
     duration: 0
     applyCount: 1
@@ -52,11 +54,11 @@ MonoBehaviour:
       scaleStat: {fileID: 0}
     targetSearcher:
       selectionAction:
-        rid: 872920357202034747
+        rid: 872920447765184584
       searchAction:
-        rid: 872920357202034754
+        rid: 872920447765184585
     costs:
-    - rid: 872920357202034749
+    - rid: 872920447765184586
     isUseCast: 0
     castTime:
       defaultValue: 0
@@ -94,17 +96,29 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 872920357202034745
+    - rid: 872920447765184580
+      type: {class: RequireStatCondition, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 033cd2b00137250419ed4b5997642c80, type: 2}
+        needValue: 5
+    - rid: 872920447765184581
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: bea6dce7af30ef24383f842df9c53c67, type: 2}
+        value:
+          defaultValue: 1
+          scaleStat: {fileID: 0}
+    - rid: 872920447765184582
       type: {class: IsEntityReadyCondition, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 872920357202034746
+    - rid: 872920447765184583
       type: {class: SpawnProjectileAction, ns: , asm: Assembly-CSharp}
       data:
         projectilePrefab: {fileID: 7050215890136018186, guid: f87ef8fa779181a4a88a2b8ddfcabf83,
           type: 3}
         spawnPointSocketName: ShootPoint
         speed: 5
-    - rid: 872920357202034747
+    - rid: 872920447765184584
       type: {class: SelectPosition, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
@@ -112,21 +126,21 @@ MonoBehaviour:
           rid: -2
         isUseScale: 0
         range: 0
-        angle: 360
+        angle: 0
         layerMask:
           serializedVersion: 2
           m_Bits: 64
-    - rid: 872920357202034749
-      type: {class: StatCost, ns: , asm: Assembly-CSharp}
-      data:
-        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
-        value:
-          defaultValue: 10
-          scaleStat: {fileID: 0}
-    - rid: 872920357202034754
+    - rid: 872920447765184585
       type: {class: SelectedTarget, ns: , asm: Assembly-CSharp}
       data:
         isShowIndicatorPlayerOnly: 0
         indicatorViewAction:
           rid: -2
         isUseScale: 0
+    - rid: 872920447765184586
+      type: {class: StatCost, ns: , asm: Assembly-CSharp}
+      data:
+        stat: {fileID: 11400000, guid: 8c84dbe3d16022f4baa698702b22d808, type: 2}
+        value:
+          defaultValue: 10
+          scaleStat: {fileID: 0}
