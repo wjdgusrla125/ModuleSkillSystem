@@ -6,32 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d073c2f4-7d56-44c0-bbdc-87ffc2ca343c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree Slot View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree Slot View.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SkillTree/Skill Tree View.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UI/SkillTooltip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/UI/SkillTooltip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameObject.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameObject.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MouseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/NewBehaviourScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/NewBehaviourScript.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +21,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/CookieController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoyStickController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoystickUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Animation/EntityBaseLayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.5/Runtime/Impulse/CinemachineImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/김정현/모듈식 스킬시스템/11.Effect_(2)_수업_자료/11.Effect (2) Scripts/Core/Effect/EffectEnums.cs" root0="SKIP_HIGHLIGHTING" />
@@ -58,20 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "CookieRun",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.2f1\Editor\Unity.exe" />
@@ -141,6 +123,9 @@
       <workItem from="1740472913761" duration="8000" />
       <workItem from="1740472927618" duration="1875000" />
       <workItem from="1740476761243" duration="2000" />
+      <workItem from="1740647999241" duration="5453000" />
+      <workItem from="1741093024976" duration="88000" />
+      <workItem from="1741171185791" duration="1921000" />
     </task>
     <servers />
   </component>
