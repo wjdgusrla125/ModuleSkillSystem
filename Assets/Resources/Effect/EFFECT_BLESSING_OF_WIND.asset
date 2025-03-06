@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categories: []
   icon: {fileID: 21300000, guid: e8938436daa56dd4e9a30fe7b3571d3d, type: 3}
-  id: 1
+  id: 0
   codeName: BLESSING_OF_WIND
   displayName: 
   description: 

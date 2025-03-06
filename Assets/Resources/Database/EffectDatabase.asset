@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: EffectDatabase
   m_EditorClassIdentifier: 
   datas:
-  - {fileID: 11400000, guid: 3f7bdac4ad335d9488750bb664274faf, type: 2}
   - {fileID: 11400000, guid: 0c194a5629a32b145aa2fd2e8b349012, type: 2}
-  - {fileID: 11400000, guid: 3f83312820e08f448a2e7e87f1bcbbfa, type: 2}
-  - {fileID: 11400000, guid: f70e3cd01ba704b46bfded39c3edfa43, type: 2}
-  - {fileID: 11400000, guid: 3a537431ae3d5f54b9b71982b00781d6, type: 2}
-  - {fileID: 11400000, guid: 448186ec4a5ce4748a0fac580a4488ac, type: 2}
-  - {fileID: 11400000, guid: ce9bf4831eb7212488ccd92f3346640c, type: 2}
   - {fileID: 11400000, guid: a3ee80917ad605a46a6d0964af941a41, type: 2}
+  - {fileID: 11400000, guid: 3a537431ae3d5f54b9b71982b00781d6, type: 2}
+  - {fileID: 11400000, guid: 3f83312820e08f448a2e7e87f1bcbbfa, type: 2}
+  - {fileID: 11400000, guid: 49954b909f77f55488186971fc5d483d, type: 2}
   - {fileID: 11400000, guid: 171e87c06e42a7642b83b73d5e59672e, type: 2}
   - {fileID: 11400000, guid: 5064fc5527ca47b4daf3668e73367acc, type: 2}
+  - {fileID: 11400000, guid: f70e3cd01ba704b46bfded39c3edfa43, type: 2}
+  - {fileID: 11400000, guid: 3f7bdac4ad335d9488750bb664274faf, type: 2}
+  - {fileID: 11400000, guid: ce9bf4831eb7212488ccd92f3346640c, type: 2}
+  - {fileID: 11400000, guid: 448186ec4a5ce4748a0fac580a4488ac, type: 2}
   - {fileID: 11400000, guid: af292143624756e41be44e1ca5ab8088, type: 2}
-  - {fileID: 11400000, guid: 49954b909f77f55488186971fc5d483d, type: 2}

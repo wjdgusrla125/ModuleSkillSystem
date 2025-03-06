@@ -6,11 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="d073c2f4-7d56-44c0-bbdc-87ffc2ca343c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameObject.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameObject.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MouseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/NewBehaviourScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/NewBehaviourScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Entity Animation Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Entity Animation Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Animations/BraveCookie.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Animations/BraveCookie.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Models/Cookie0001_Brave_Model.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Models/Cookie0001_Brave_Model.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Scenes/CookieRun.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Scenes/CookieRun.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/CookieController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/CookieController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoyStickController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoyStickController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_BLESSING_OF_WIND.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_BLESSING_OF_WIND.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_DARK_BALL_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_DARK_BALL_DAMAGE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_EXPLOSION_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_EXPLOSION_DAMAGE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_HEAL.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_LAND_OF_FIRE_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_LAND_OF_FIRE_DAMAGE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_POISON.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_POISON.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_RAIN_OF_SWORD_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_RAIN_OF_SWORD_DAMAGE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_REMOVE_POISON.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_REMOVE_POISON.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_ROLLING_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_ROLLING_HEAL.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_SLEEP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_SLEEP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_STUN.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_STUN.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_WIND_CUTTER_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_WIND_CUTTER_DAMAGE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +40,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/Animation/CookieBaseLayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/CookieController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoyStickController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoystickUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,20 +60,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "CookieRun",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CookieRun&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.2f1\Editor\Unity.exe" />
@@ -126,6 +146,8 @@
       <workItem from="1740647999241" duration="5453000" />
       <workItem from="1741093024976" duration="88000" />
       <workItem from="1741171185791" duration="1921000" />
+      <workItem from="1741174181581" duration="1744000" />
+      <workItem from="1741237443994" duration="5272000" />
     </task>
     <servers />
   </component>

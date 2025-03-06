@@ -10,6 +10,12 @@ public class CookieController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float rotationSpeed = 10f;
     
+    public float MoveSpeed 
+    { 
+        get { return moveSpeed; }
+        set { moveSpeed = Mathf.Max(0, value); }
+    }
+    
     // 이동 방식 선택을 위한 열거형
     public enum MovementType
     {

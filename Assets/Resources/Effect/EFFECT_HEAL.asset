@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categories: []
   icon: {fileID: 0}
-  id: 2
+  id: 3
   codeName: HEAL
   displayName: 
   description: 

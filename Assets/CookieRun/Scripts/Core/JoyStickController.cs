@@ -170,7 +170,7 @@ public class JoyStickController : MonoSingleton<JoyStickController>
         // 조이스틱 핸들 위치 업데이트
         if (joystickHandle != null)
         {
-            joystickHandle.position = joystickOrigin + joystickDirection * magnitude * joystickRadius;
+            joystickHandle.position = joystickOrigin + joystickDirection * (magnitude * joystickRadius);
         }
     }
     
@@ -193,6 +193,11 @@ public class JoyStickController : MonoSingleton<JoyStickController>
         
         // 이동 중지 이벤트 발행
         onJoystickMove?.Invoke(Vector2.zero, 0f);
+    }
+    
+    public float GetJoystickMagnitude()
+    {
+        return joystickMagnitude;
     }
 
     // 커서 변경 기능 유지 (UI 요소 등에 사용 가능)

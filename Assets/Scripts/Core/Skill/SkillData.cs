@@ -4,6 +4,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
+public class ApplyData
+{
+    public int applyCount;
+    
+    // Optional: Add PrecedingAction if needed for each apply instance
+    [UnderlineTitle("Preceding Action")]
+    [SerializeReference, SubclassSelector]
+    public SkillPrecedingAction precedingAction;
+    
+    // Optional: Add Action if needed for each apply instance
+    [UnderlineTitle("Action")]
+    [SerializeReference, SubclassSelector]
+    public SkillAction action;
+    
+    [UnderlineTitle("Target Searcher")]
+    public TargetSearcher targetSearcher;
+    
+    [UnderlineTitle("Effect")]
+    public EffectSelector[] effectSelectors;
+    
+    [UnderlineTitle("Animation")]
+    public InSkillActionFinishOption inSkillActionFinishOption;
+    public AnimatorParameter actionAnimatorParameter;
+    
+    [SerializeReference, SubclassSelector]
+    public CustomAction[] customActionsOnAction;
+}
+
+[Serializable]
 public struct SkillData
 {
     public int level;
@@ -41,6 +70,10 @@ public struct SkillData
     // 예를 들어서, ApplyCycle이 1초라면, 바로 한번 적용된 후 1초마다 적용되게 됨. 
     [Min(0f)]
     public float applyCycle;
+    
+    // applyCount가 0보다 클 때 각 Apply마다 사용할 데이터
+    [UnderlineTitle("Apply Datas")]
+    public ApplyData[] applyDatas;
 
     public StatScaleFloat cooldown;
 

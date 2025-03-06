@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categories: []
   icon: {fileID: 0}
-  id: 11
+  id: 4
   codeName: LAND_OF_FIRE_DAMAGE
   displayName: 
   description: 

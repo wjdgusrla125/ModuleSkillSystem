@@ -30,6 +30,9 @@ public class SkillEditor : IdentifiedObjectEditor
     private readonly string[] customActionsToolbarList = new[] { "Cast", "Charge", "Preceding", "Action" };
     // Skill Data마다 선택한 Toolbar Button의 Index 값
     private Dictionary<int, int> customActionToolbarIndexesByLevel = new();
+    
+    // ApplyData 관련 폴드아웃 상태 저장
+    private Dictionary<int, bool> applyDatasFoldoutByLevel = new();
 
     private bool IsPassive => typeProperty.enumValueIndex == (int)SkillType.Passive;
     private bool IsToggleType => useTypeProperty.enumValueIndex == (int)SkillUseType.Toggle;
@@ -180,6 +183,8 @@ public class SkillEditor : IdentifiedObjectEditor
             var chargeDurationProperty = property.FindPropertyRelative("chargeDuration");
             var chargeTimeProperty = property.FindPropertyRelative("chargeTime");
             var needChargeTimeToUseProperty = property.FindPropertyRelative("needChargeTimeToUse");
+            var applyCountProperty = property.FindPropertyRelative("applyCount");
+            var applyDatasProperty = property.FindPropertyRelative("applyDatas");
 
             EditorGUILayout.BeginVertical("HelpBox");
             {
@@ -217,13 +222,97 @@ public class SkillEditor : IdentifiedObjectEditor
                     if (useTypeProperty.enumValueIndex == (int)SkillUseType.Instant)
                         EditorGUILayout.PropertyField(property);
 
-                    // Action And Setting
-                    for (int j = 0; j < 8; j++)
+                    // Action
+                    property.NextVisible(false);
+                    EditorGUILayout.PropertyField(property);
+
+                    // Setting - runningFinishOption, duration, applyCount, applyCycle
+                    for (int j = 0; j < 4; j++)
                     {
                         // 다음 변수의 Property로 이동하면서 그려줌
                         property.NextVisible(false);
                         EditorGUILayout.PropertyField(property);
                     }
+                    
+                    // applyDatas 처리
+                    property.NextVisible(false); // 다음은 applyDatas일 것
+                    
+                    // applyCount가 0보다 크면 applyDatas 필드를 보여줌
+                    if (applyCountProperty.intValue > 0)
+                    {
+                        // applyDatas의 크기를 applyCount에 맞게 조정
+                        if (applyDatasProperty.arraySize != applyCountProperty.intValue)
+                        {
+                            applyDatasProperty.arraySize = applyCountProperty.intValue;
+                            
+                            // 새로 추가된 applyData에 applyCount 값 설정
+                            for (int j = 0; j < applyDatasProperty.arraySize; j++)
+                            {
+                                var applyDataProperty = applyDatasProperty.GetArrayElementAtIndex(j);
+                                applyDataProperty.FindPropertyRelative("applyCount").intValue = j + 1;
+                            }
+                        }
+                        
+                        // applyDatas 폴드아웃 처리
+                        if (!applyDatasFoldoutByLevel.ContainsKey(i))
+                        {
+                            applyDatasFoldoutByLevel[i] = false;
+                        }
+                        
+                        EditorGUILayout.Space();
+                        applyDatasFoldoutByLevel[i] = EditorGUILayout.Foldout(applyDatasFoldoutByLevel[i], "Apply Datas", true);
+                        
+                        if (applyDatasFoldoutByLevel[i])
+                        {
+                            EditorGUI.indentLevel++;
+                            
+                            for (int j = 0; j < applyDatasProperty.arraySize; j++)
+                            {
+                                var applyDataProperty = applyDatasProperty.GetArrayElementAtIndex(j);
+                                
+                                EditorGUILayout.BeginVertical("Box");
+                                
+                                EditorGUILayout.LabelField($"Apply #{j + 1}", EditorStyles.boldLabel);
+                                
+                                // Apply 데이터 필드 표시
+                                var applyDataCountProperty = applyDataProperty.FindPropertyRelative("applyCount");
+                                GUI.enabled = false;
+                                EditorGUILayout.PropertyField(applyDataCountProperty);
+                                GUI.enabled = true;
+                                
+                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("precedingAction"));
+                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("action"));
+                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("targetSearcher"));
+                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("effectSelectors"));
+                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("inSkillActionFinishOption"));
+                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("actionAnimatorParameter"));
+                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("customActionsOnAction"));
+                                
+                                EditorGUILayout.EndVertical();
+                                
+                                EditorGUILayout.Space();
+                            }
+                            
+                            EditorGUI.indentLevel--;
+                        }
+                    }
+                    else
+                    {
+                        // applyCount가 0 이하인 경우 applyDatas 배열을 비움
+                        applyDatasProperty.arraySize = 0;
+                    }
+
+                    // cooldown
+                    property.NextVisible(false);
+                    EditorGUILayout.PropertyField(property);
+
+                    // Target Searcher
+                    property.NextVisible(false);
+                    EditorGUILayout.PropertyField(property);
+
+                    // Cost
+                    property.NextVisible(false);
+                    EditorGUILayout.PropertyField(property);
 
                     // Cast
                     property.NextVisible(false);
@@ -324,6 +413,9 @@ public class SkillEditor : IdentifiedObjectEditor
             CustomEditorUtility.DeepCopySerializeReference(newElementProperty.FindPropertyRelative("precedingAction"));
 
             CustomEditorUtility.DeepCopySerializeReference(newElementProperty.FindPropertyRelative("action"));
+            
+            // ApplyDatas Deep Copy
+            CustomEditorUtility.DeepCopySerializeReferenceArray(newElementProperty.FindPropertyRelative("applyDatas"));
 
             // Costs Deep Copy
             CustomEditorUtility.DeepCopySerializeReferenceArray(newElementProperty.FindPropertyRelative("costs"));

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categories: []
   icon: {fileID: 0}
-  id: 10
+  id: 11
   codeName: WIND_CUTTER_DAMAGE
   displayName: 
   description: 
