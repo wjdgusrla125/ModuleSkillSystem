@@ -9,6 +9,5 @@ public class SkillTree : IdentifiedObject
     [SerializeField, HideInInspector]
     private SkillTreeGraph graph;
 
-    public SkillTreeSlotNode[] GetSlotNodes()
-        => graph.GetSlotNodes();
+    public SkillTreeSlotNode[] GetSlotNodes() => graph.GetSlotNodes();
 }    

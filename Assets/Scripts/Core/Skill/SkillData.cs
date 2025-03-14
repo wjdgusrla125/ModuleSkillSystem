@@ -3,34 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class ApplyData
-{
-    public int applyCount;
-    
-    // Optional: Add PrecedingAction if needed for each apply instance
-    [UnderlineTitle("Preceding Action")]
-    [SerializeReference, SubclassSelector]
-    public SkillPrecedingAction precedingAction;
-    
-    // Optional: Add Action if needed for each apply instance
-    [UnderlineTitle("Action")]
-    [SerializeReference, SubclassSelector]
-    public SkillAction action;
-    
-    [UnderlineTitle("Target Searcher")]
-    public TargetSearcher targetSearcher;
-    
-    [UnderlineTitle("Effect")]
-    public EffectSelector[] effectSelectors;
-    
-    [UnderlineTitle("Animation")]
-    public InSkillActionFinishOption inSkillActionFinishOption;
-    public AnimatorParameter actionAnimatorParameter;
-    
-    [SerializeReference, SubclassSelector]
-    public CustomAction[] customActionsOnAction;
-}
+// [Serializable]
+// public class ApplyData
+// {
+//     public int applyCount;
+//     
+//     [UnderlineTitle("Effect")]
+//     public EffectSelector[] effectSelectors;
+//     
+//     [UnderlineTitle("Animation")]
+//     public InSkillActionFinishOption inSkillActionFinishOption;
+//     public AnimatorParameter actionAnimatorParameter;
+//     
+//     [SerializeReference, SubclassSelector]
+//     public CustomAction[] customActionsOnAction;
+// }
 
 [Serializable]
 public struct SkillData
@@ -72,8 +59,8 @@ public struct SkillData
     public float applyCycle;
     
     // applyCount가 0보다 클 때 각 Apply마다 사용할 데이터
-    [UnderlineTitle("Apply Datas")]
-    public ApplyData[] applyDatas;
+    // [UnderlineTitle("Apply Datas")]
+    // public ApplyData[] applyDatas;
 
     public StatScaleFloat cooldown;
 

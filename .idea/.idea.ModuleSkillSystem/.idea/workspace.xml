@@ -6,30 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="d073c2f4-7d56-44c0-bbdc-87ffc2ca343c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Entity Animation Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Entity Animation Controller.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Animations/BraveCookie.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Animations/BraveCookie.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Models/Cookie0001_Brave_Model.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Models/Cookie0001_Brave_Model.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Scenes/CookieRun.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Scenes/CookieRun.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/CookieController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/CookieController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoyStickController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoyStickController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_BLESSING_OF_WIND.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_BLESSING_OF_WIND.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_DARK_BALL_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_DARK_BALL_DAMAGE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_EXPLOSION_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_EXPLOSION_DAMAGE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_HEAL.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_LAND_OF_FIRE_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_LAND_OF_FIRE_DAMAGE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_POISON.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_POISON.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_RAIN_OF_SWORD_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_RAIN_OF_SWORD_DAMAGE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_REMOVE_POISON.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_REMOVE_POISON.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_ROLLING_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_ROLLING_HEAL.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_SLEEP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_SLEEP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_STUN.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_STUN.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_WIND_CUTTER_DAMAGE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Effect/EFFECT_WIND_CUTTER_DAMAGE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/SkillTreeDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/SkillTreeDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_CookieATK.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_CookieATK.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_DEFAULT_SKILL_TREE.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_DEFAULT_SKILL_TREE.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_SKILL_TREE.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_SKILL_TREE.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/Skill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillCondition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SkillTree/SkillTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SkillTree/SkillTree.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/CookieController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoyStickController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/JoystickUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CookieRun/Scripts/Core/NewBehaviourScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Animation/EntityBaseLayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.5/Runtime/Impulse/CinemachineImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/김정현/모듈식 스킬시스템/11.Effect_(2)_수업_자료/11.Effect (2) Scripts/Core/Effect/EffectEnums.cs" root0="SKIP_HIGHLIGHTING" />
@@ -148,6 +152,11 @@
       <workItem from="1741171185791" duration="1921000" />
       <workItem from="1741174181581" duration="1744000" />
       <workItem from="1741237443994" duration="5272000" />
+      <workItem from="1741678336969" duration="10460000" />
+      <workItem from="1741691357551" duration="1351000" />
+      <workItem from="1741775628120" duration="6547000" />
+      <workItem from="1741858224824" duration="6647000" />
+      <workItem from="1741939140709" duration="4290000" />
     </task>
     <servers />
   </component>

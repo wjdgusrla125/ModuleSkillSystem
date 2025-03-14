@@ -50,15 +50,6 @@ MonoBehaviour:
     applyCycle: 0
     applyDatas:
     - applyCount: 1
-      precedingAction:
-        rid: -2
-      action:
-        rid: -2
-      targetSearcher:
-        selectionAction:
-          rid: -2
-        searchAction:
-          rid: -2
       effectSelectors: []
       inSkillActionFinishOption: 0
       actionAnimatorParameter:

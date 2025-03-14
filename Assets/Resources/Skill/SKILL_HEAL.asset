@@ -48,6 +48,21 @@ MonoBehaviour:
     duration: 10
     applyCount: 2
     applyCycle: 2
+    applyDatas:
+    - applyCount: 1
+      effectSelectors: []
+      inSkillActionFinishOption: 0
+      actionAnimatorParameter:
+        type: 0
+        name: 
+      customActionsOnAction: []
+    - applyCount: 2
+      effectSelectors: []
+      inSkillActionFinishOption: 0
+      actionAnimatorParameter:
+        type: 0
+        name: 
+      customActionsOnAction: []
     cooldown:
       defaultValue: 10
       scaleStat: {fileID: 0}
@@ -101,6 +116,21 @@ MonoBehaviour:
     duration: 10
     applyCount: 2
     applyCycle: 2
+    applyDatas:
+    - applyCount: 1
+      effectSelectors: []
+      inSkillActionFinishOption: 0
+      actionAnimatorParameter:
+        type: 0
+        name: 
+      customActionsOnAction: []
+    - applyCount: 2
+      effectSelectors: []
+      inSkillActionFinishOption: 0
+      actionAnimatorParameter:
+        type: 0
+        name: 
+      customActionsOnAction: []
     cooldown:
       defaultValue: 9
       scaleStat: {fileID: 0}
@@ -156,6 +186,7 @@ MonoBehaviour:
     duration: 10
     applyCount: 2
     applyCycle: 2
+    applyDatas: []
     cooldown:
       defaultValue: 8
       scaleStat: {fileID: 0}

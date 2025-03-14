@@ -5,4 +5,5 @@ using UnityEngine;
 [System.Serializable]
 public abstract class SkillCondition : Condition<Skill>
 {
+    
 }

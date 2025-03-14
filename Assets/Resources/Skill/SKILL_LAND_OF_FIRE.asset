@@ -46,6 +46,7 @@ MonoBehaviour:
     duration: 0
     applyCount: 0
     applyCycle: 0.25
+    applyDatas: []
     cooldown:
       defaultValue: 1
       scaleStat: {fileID: 0}

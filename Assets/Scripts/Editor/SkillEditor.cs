@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
@@ -33,6 +34,7 @@ public class SkillEditor : IdentifiedObjectEditor
     
     // ApplyData 관련 폴드아웃 상태 저장
     private Dictionary<int, bool> applyDatasFoldoutByLevel = new();
+    
 
     private bool IsPassive => typeProperty.enumValueIndex == (int)SkillType.Passive;
     private bool IsToggleType => useTypeProperty.enumValueIndex == (int)SkillUseType.Toggle;
@@ -185,6 +187,7 @@ public class SkillEditor : IdentifiedObjectEditor
             var needChargeTimeToUseProperty = property.FindPropertyRelative("needChargeTimeToUse");
             var applyCountProperty = property.FindPropertyRelative("applyCount");
             var applyDatasProperty = property.FindPropertyRelative("applyDatas");
+            var applyCycleProperty = property.FindPropertyRelative("applyCycle");
 
             EditorGUILayout.BeginVertical("HelpBox");
             {
@@ -226,19 +229,27 @@ public class SkillEditor : IdentifiedObjectEditor
                     property.NextVisible(false);
                     EditorGUILayout.PropertyField(property);
 
-                    // Setting - runningFinishOption, duration, applyCount, applyCycle
-                    for (int j = 0; j < 4; j++)
+                    // Setting - runningFinishOption, duration
+                    for (int j = 0; j < 2; j++)
                     {
                         // 다음 변수의 Property로 이동하면서 그려줌
                         property.NextVisible(false);
                         EditorGUILayout.PropertyField(property);
                     }
                     
+                    // applyCount
+                    property.NextVisible(false);
+                    EditorGUILayout.PropertyField(property);
+                    
+                    // applyCycle
+                    property.NextVisible(false);
+                    EditorGUILayout.PropertyField(property);
+                    
                     // applyDatas 처리
                     property.NextVisible(false); // 다음은 applyDatas일 것
                     
                     // applyCount가 0보다 크면 applyDatas 필드를 보여줌
-                    if (applyCountProperty.intValue > 0)
+                    if (applyCountProperty.intValue > 1)
                     {
                         // applyDatas의 크기를 applyCount에 맞게 조정
                         if (applyDatasProperty.arraySize != applyCountProperty.intValue)
@@ -266,6 +277,7 @@ public class SkillEditor : IdentifiedObjectEditor
                         {
                             EditorGUI.indentLevel++;
                             
+                            // 각 ApplyData를 개별적으로 표시
                             for (int j = 0; j < applyDatasProperty.arraySize; j++)
                             {
                                 var applyDataProperty = applyDatasProperty.GetArrayElementAtIndex(j);
@@ -280,12 +292,14 @@ public class SkillEditor : IdentifiedObjectEditor
                                 EditorGUILayout.PropertyField(applyDataCountProperty);
                                 GUI.enabled = true;
                                 
-                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("precedingAction"));
-                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("action"));
-                                EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("targetSearcher"));
+                                // Effect
                                 EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("effectSelectors"));
+                                
+                                // Animation
                                 EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("inSkillActionFinishOption"));
                                 EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("actionAnimatorParameter"));
+                                
+                                // Custom Actions
                                 EditorGUILayout.PropertyField(applyDataProperty.FindPropertyRelative("customActionsOnAction"));
                                 
                                 EditorGUILayout.EndVertical();

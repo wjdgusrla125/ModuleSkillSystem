@@ -49,6 +49,14 @@ MonoBehaviour:
     duration: 0
     applyCount: 1
     applyCycle: 0
+    applyDatas:
+    - applyCount: 1
+      effectSelectors: []
+      inSkillActionFinishOption: 0
+      actionAnimatorParameter:
+        type: 0
+        name: 
+      customActionsOnAction: []
     cooldown:
       defaultValue: 10
       scaleStat: {fileID: 0}

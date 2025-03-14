@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1338047e14e840144ba8218678eafce5, type: 3}
-  m_Name: SkillTreeDatabase
+  m_Name: ComboSkillDatabase
   m_EditorClassIdentifier: 
   datas: []
