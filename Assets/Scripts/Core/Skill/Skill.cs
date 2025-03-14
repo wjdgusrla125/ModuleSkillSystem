@@ -373,7 +373,29 @@ public class Skill : IdentifiedObject
             return description;
         }
     }
+    
+    //수정 부분
+    // Skill 클래스에 이 속성 추가
+    public ApplyData CurrentApplyData
+    {
+        get
+        {
+            if (!currentData.useApplySpecificData || currentData.applyDatas == null || currentData.applyDatas.Length == 0)
+                return null;
+            
+            var applyData = Array.Find(currentData.applyDatas, data => data.applyIndex == currentApplyCount);
+            return applyData ?? (currentData.applyDatas.Length > 0 ? currentData.applyDatas[currentData.applyDatas.Length - 1] : null);
+        }
+    }
 
+    // 현재 적용 횟수에 따른 애니메이션 파라미터를 가져오는 메서드 추가
+    public AnimatorParameter GetCurrentActionAnimationParameter()
+    {
+        var applyData = CurrentApplyData;
+        return applyData != null ? applyData.actionAnimatorParameter : ActionAnimationParameter;
+    }
+
+    
     // 이벤트 선언
     public event LevelChangedHandler onLevelChanged;
     public event StateChangedHandler onStateChanged;
@@ -733,7 +755,7 @@ public class Skill : IdentifiedObject
 
     // Apply 메소드: 스킬 효과 적용
     // isConsumeApplyCount 매개변수로 적용 횟수 소모 여부 제어
-    public void Apply(bool isConsumeApplyCount = true)
+    /*public void Apply(bool isConsumeApplyCount = true)
     {
         // 무한 적용 가능하거나, 횟수를 소모하지 않거나, 적용 횟수가 남아있는지 확인
         Debug.Assert(IsInfinitelyApplicable || !isConsumeApplyCount || (CurrentApplyCount < ApplyCount),
@@ -763,7 +785,153 @@ public class Skill : IdentifiedObject
 
         // 적용 완료 이벤트 발생
         onApplied?.Invoke(this, CurrentApplyCount);
+    }*/
+    
+    public void Apply(bool isConsumeApplyCount = true)
+{
+    // 무한 적용 가능하거나, 횟수를 소모하지 않거나, 적용 횟수가 남아있는지 확인
+    Debug.Assert(IsInfinitelyApplicable || !isConsumeApplyCount || (CurrentApplyCount < ApplyCount),
+        $"Skill({CodeName})의 최대 적용 횟수({ApplyCount})를 초과해서 적용할 수 없습니다.");
+
+    // 현재 적용 횟수에 해당하는 ApplyData를 찾습니다
+    ApplyData currentApplyData = null;
+    
+    // 적용별 데이터 사용이 활성화되었고, 데이터가 존재하는 경우에만 처리
+    if (currentData.useApplySpecificData && currentData.applyDatas != null && currentData.applyDatas.Length > 0)
+    {
+        // 현재 적용 횟수와 정확히 일치하는 applyIndex를 가진 ApplyData를 찾음
+        currentApplyData = Array.Find(currentData.applyDatas, data => data.applyIndex == CurrentApplyCount);
+        
+        // 해당 인덱스가 없으면 가장 가까운 이전 인덱스의 데이터 사용
+        if (currentApplyData == null)
+        {
+            // 현재 적용 횟수보다 작거나 같은 인덱스 중 가장 큰 것을 찾음
+            int closestIndex = -1;
+            foreach (var data in currentData.applyDatas)
+            {
+                if (data.applyIndex <= CurrentApplyCount && data.applyIndex > closestIndex)
+                    closestIndex = data.applyIndex;
+            }
+            
+            if (closestIndex >= 0)
+                currentApplyData = Array.Find(currentData.applyDatas, data => data.applyIndex == closestIndex);
+            else if (currentData.applyDatas.Length > 0)
+                currentApplyData = currentData.applyDatas[0]; // 적절한 데이터가 없으면 첫 번째 사용
+        }
     }
+
+    // 적용할 이펙트 선택기 결정 (ApplyData가 있으면 해당 이펙트 사용, 없으면 기본 이펙트)
+    EffectSelector[] effectSelectorsToUse = null;
+    if (currentApplyData != null && currentApplyData.effectSelectors != null && currentApplyData.effectSelectors.Length > 0)
+    {
+        effectSelectorsToUse = currentApplyData.effectSelectors;
+        Debug.Log($"Skill {CodeName}: 적용 #{CurrentApplyCount}에 대한 특정 이펙트 사용");
+    }
+
+    // 타겟 검색 타이밍이 적용 시점이라면 타겟 검색 실행
+    if (targetSearchTimingOption == TargetSearchTimingOption.Apply)
+    {
+        Debug.Log($"Skill {CodeName}: 적용 시점에 타겟 검색 실행");
+        SearchTargets();
+    }
+
+    // 커스텀 액션 실행 (ApplyData에 있으면 그것 사용, 없으면 기본 커스텀 액션)
+    if (currentApplyData != null && currentApplyData.customActionsOnAction != null && currentApplyData.customActionsOnAction.Length > 0)
+    {
+        Debug.Log($"Skill {CodeName}: 적용 #{CurrentApplyCount}에 대한 특정 커스텀 액션 실행");
+        foreach (var customAction in currentApplyData.customActionsOnAction)
+        {
+            if (customAction != null)
+                customAction.Run(this);
+        }
+    }
+    else
+    {
+        Debug.Log($"Skill {CodeName}: 기본 커스텀 액션 실행");
+        RunCustomActions(SkillCustomActionType.Action);
+    }
+
+    // 애니메이션 파라미터 적용 (ApplyData에 정의된 경우)
+    if (currentApplyData != null && !string.IsNullOrEmpty(currentApplyData.actionAnimatorParameter.ToString()))
+    {
+        Debug.Log($"Skill {CodeName}: 적용 #{CurrentApplyCount}에 대한 특정 애니메이션 파라미터 적용");
+        // Owner의 Animator 컴포넌트 가져오기
+        var animator = Owner.GetComponent<Animator>();
+        if (animator != null)
+        {
+            // 애니메이션 파라미터 타입에 따라 적절한 메소드 호출
+            switch (currentApplyData.actionAnimatorParameter.type)
+            {
+                case AnimatorParameterType.Trigger:
+                    animator.SetTrigger(currentApplyData.actionAnimatorParameter.ToString());
+                    break;
+                case AnimatorParameterType.Bool:
+                    animator.SetBool(currentApplyData.actionAnimatorParameter.ToString(), true);
+                    break;
+            }
+        }
+    }
+
+    // 이펙트 적용 (ApplyData에 지정된 이펙트 또는 기본 액션)
+    if (effectSelectorsToUse != null)
+    {
+        Debug.Log($"Skill {CodeName}: 적용 #{CurrentApplyCount}를 위한 {effectSelectorsToUse.Length}개의 이펙트 생성 및 적용");
+        
+        // 각 이펙트 선택기에서 이펙트 생성
+        List<Effect> tempEffects = new List<Effect>();
+        foreach (var selector in effectSelectorsToUse)
+        {
+            if (selector != null)
+            {
+                var effect = selector.CreateEffect(this);
+                if (effect != null)
+                {
+                    tempEffects.Add(effect);
+                    // 현재 차지 파워에 맞게 이펙트 스케일 조정
+                    effect.Scale = CurrentChargePower;
+                    // 이펙트 적용
+                    effect.Apply();
+                }
+            }
+        }
+        
+        // 임시 이펙트 정리 (사용 후 파괴)
+        foreach (var effect in tempEffects)
+        {
+            if (effect != null)
+                Destroy(effect);
+        }
+    }
+    else
+    {
+        // 기본 액션 적용
+        Debug.Log($"Skill {CodeName}: 기본 액션 적용");
+        Action.Apply(this);
+    }
+
+    // 실행 타입에 따라 적용 주기 관리
+    if (executionType == SkillExecutionType.Auto)
+    {
+        CurrentApplyCycle %= ApplyCycle;
+        Debug.Log($"Skill {CodeName}: Auto 실행 타입, 현재 적용 주기 = {CurrentApplyCycle}");
+    }
+    else
+    {
+        CurrentApplyCycle = 0f;
+        Debug.Log($"Skill {CodeName}: Input 실행 타입, 적용 주기 리셋");
+    }
+
+    // 적용 횟수를 증가시키기 전에 이벤트를 발생시켜서 현재 적용에 대한 정보 제공
+    onApplied?.Invoke(this, CurrentApplyCount);
+
+    // 적용 횟수 소모가 필요하면 현재 적용 횟수 증가
+    if (isConsumeApplyCount)
+    {
+        int prevApplyCount = CurrentApplyCount;
+        CurrentApplyCount++;
+        Debug.Log($"Skill {CodeName}: 적용 횟수 증가 {prevApplyCount} -> {CurrentApplyCount}");
+    }
+}
 
     // IsInState 메소드: 스킬의 상태 기계가 특정 상태인지 확인
     public bool IsInState<T>() where T : State<Skill> => StateMachine.IsInState<T>();

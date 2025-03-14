@@ -3,21 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// [Serializable]
-// public class ApplyData
-// {
-//     public int applyCount;
-//     
-//     [UnderlineTitle("Effect")]
-//     public EffectSelector[] effectSelectors;
-//     
-//     [UnderlineTitle("Animation")]
-//     public InSkillActionFinishOption inSkillActionFinishOption;
-//     public AnimatorParameter actionAnimatorParameter;
-//     
-//     [SerializeReference, SubclassSelector]
-//     public CustomAction[] customActionsOnAction;
-// }
+[Serializable]
+public class ApplyData
+{
+    public int applyIndex;  // Changed from applyCount to applyIndex
+    
+    [UnderlineTitle("Effect")]
+    public EffectSelector[] effectSelectors;
+    
+    [UnderlineTitle("Animation")]
+    public InSkillActionFinishOption inSkillActionFinishOption;
+    public AnimatorParameter actionAnimatorParameter;
+    
+    [SerializeReference, SubclassSelector]
+    public CustomAction[] customActionsOnAction;
+}
 
 [Serializable]
 public struct SkillData
@@ -58,9 +58,9 @@ public struct SkillData
     [Min(0f)]
     public float applyCycle;
     
-    // applyCount가 0보다 클 때 각 Apply마다 사용할 데이터
-    // [UnderlineTitle("Apply Datas")]
-    // public ApplyData[] applyDatas;
+    [UnderlineTitle("Apply Specific Data")]
+    public bool useApplySpecificData; // 이 기능을 활성화/비활성화하는 토글
+    public ApplyData[] applyDatas; // 각 적용 횟수별 데이터 배열
 
     public StatScaleFloat cooldown;
 

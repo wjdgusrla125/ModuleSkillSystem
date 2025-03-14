@@ -6,33 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d073c2f4-7d56-44c0-bbdc-87ffc2ca343c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ModuleSkillSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Animations/BraveCookie.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Animations/BraveCookie.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CookieRun/Scenes/CookieRun.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CookieRun/Scenes/CookieRun.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/EffectDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/SkillDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Database/SkillTreeDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Database/SkillTreeDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_BLESSING_OF_WIND.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_CookieATK.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_CookieATK.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_DARK_BALL.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_EXPLOSION.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_HEAL.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_LAND_OF_FIRE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_POISON_SWAMP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_RAIN_OF_SWORD.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_ROLLING.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skill/SKILL_WIND_CUTTER.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_DEFAULT_SKILL_TREE.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_DEFAULT_SKILL_TREE.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_SKILL_TREE.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillTree/SKILLTREE_SKILL_TREE.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/Skill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillCondition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Skill/SkillSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SkillTree/SkillTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SkillTree/SkillTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/SkillSystemWindow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +131,7 @@
       <workItem from="1741691357551" duration="1351000" />
       <workItem from="1741775628120" duration="6547000" />
       <workItem from="1741858224824" duration="6647000" />
-      <workItem from="1741939140709" duration="4290000" />
+      <workItem from="1741939140709" duration="5757000" />
     </task>
     <servers />
   </component>
